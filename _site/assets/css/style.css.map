@@ -1,1 +1,0 @@
-{"version":3,"sourceRoot":"","sources":["../../_sass/main.scss"],"names":[],"mappings":"AAAA;EAEI;EACA;;;AAEJ;EACI;;;AAGJ;EACI;;;AAEJ;EACI","sourcesContent":[".current {\r\n\r\n    color: green;\r\n    font-family: 'comic sans ms';\r\n}\r\na {\r\n    text-decoration: none;\r\n\r\n}\r\na:hover {\r\n    color: red;\r\n}\r\n.last_name{\r\n    color: blue;\r\n}"],"file":"style.css"}
