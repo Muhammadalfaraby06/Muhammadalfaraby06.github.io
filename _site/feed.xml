@@ -1,0 +1,956 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-06-02T15:49:28+07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Home</title><entry><title type="html">HTML Link dan Lists</title><link href="http://localhost:4000/2025/03/20/html-link-dan-lists.html" rel="alternate" type="text/html" title="HTML Link dan Lists" /><published>2025-03-20T00:00:00+07:00</published><updated>2025-03-20T00:00:00+07:00</updated><id>http://localhost:4000/2025/03/20/html-link-dan-lists</id><content type="html" xml:base="http://localhost:4000/2025/03/20/html-link-dan-lists.html"><![CDATA[<p>Penjelasan tentang Link dan Lists pada HTML.</p>
+
+<h1 id="penjelasan-lengkap-tentang-link-dan-lists-pada-html"><strong>Penjelasan Lengkap tentang Link dan Lists pada HTML</strong></h1>
+
+<p>Dalam <strong>HTML</strong> (<em>HyperText Markup Language</em>), <strong>link</strong> dan <strong>lists</strong> adalah elemen dasar yang sangat penting dalam membuat struktur dan navigasi halaman web. Berikut adalah penjelasan lengkap tentang kedua elemen ini:</p>
+
+<hr />
+
+<h2 id="1-link-tautan-pada-html"><strong>1. Link (Tautan) pada HTML</strong></h2>
+<p>Link atau tautan dalam HTML digunakan untuk menghubungkan satu halaman ke halaman lainnya atau ke sumber eksternal seperti file, gambar, atau dokumen lainnya. Link juga bisa digunakan untuk menavigasi ke bagian tertentu dalam satu halaman web.</p>
+
+<h3 id="a-sintaks-dasar-link"><strong>A. Sintaks Dasar Link</strong></h3>
+<p>Tag yang digunakan untuk membuat link adalah <code class="language-plaintext highlighter-rouge">&lt;a&gt;</code> (<strong>anchor</strong>).</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Teks atau elemen yang bisa diklik<span class="nt">&lt;/a&gt;</span>
+</code></pre></div></div>
+
+<h3 id="b-atribut-pada-tag-a"><strong>B. Atribut pada Tag <code class="language-plaintext highlighter-rouge">&lt;a&gt;</code></strong></h3>
+<p>Berikut adalah atribut-atribut yang biasa digunakan pada elemen <code class="language-plaintext highlighter-rouge">&lt;a&gt;</code>:</p>
+
+<ul>
+  <li><strong><code class="language-plaintext highlighter-rouge">href</code></strong> – Menentukan URL tujuan link.<br />
+  <strong>Contoh:</strong>
+    <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://www.example.com"</span><span class="nt">&gt;</span>
+  Kunjungi Example<span class="nt">&lt;/a&gt;</span>
+</code></pre></div>    </div>
+  </li>
+  <li><strong><code class="language-plaintext highlighter-rouge">target</code></strong> – Menentukan bagaimana link dibuka.<br />
+  Nilai yang tersedia:
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">_self</code> – Membuka link di tab/jendela saat ini (default).</li>
+      <li><code class="language-plaintext highlighter-rouge">_blank</code> – Membuka link di tab/jendela baru.</li>
+      <li><code class="language-plaintext highlighter-rouge">_parent</code> – Membuka link di jendela induk (jika ada).</li>
+      <li><code class="language-plaintext highlighter-rouge">_top</code> – Membuka link di jendela penuh (keluar dari frame).</li>
+    </ul>
+
+    <p><strong>Contoh:</strong></p>
+    <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://www.example.com"</span> 
+  <span class="na">target=</span><span class="s">"_blank"</span><span class="nt">&gt;</span>
+  Buka di Tab Baru<span class="nt">&lt;/a&gt;</span>
+</code></pre></div>    </div>
+  </li>
+  <li><strong><code class="language-plaintext highlighter-rouge">title</code></strong> – Menampilkan keterangan saat kursor diarahkan ke link.<br />
+  <strong>Contoh:</strong>
+    <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">title=</span><span class="s">"Keterangan"</span><span class="nt">&gt;</span>
+  Link dengan Keterangan<span class="nt">&lt;/a&gt;</span>
+</code></pre></div>    </div>
+  </li>
+  <li><strong><code class="language-plaintext highlighter-rouge">rel</code></strong> – Menentukan hubungan antara dokumen dengan link tujuan.<br />
+  Nilai yang umum digunakan:
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">nofollow</code> – Memberitahu mesin pencari untuk tidak mengikuti link ini.</li>
+      <li><code class="language-plaintext highlighter-rouge">noopener</code> – Mencegah halaman baru mengakses <code class="language-plaintext highlighter-rouge">window.opener</code>.</li>
+      <li><code class="language-plaintext highlighter-rouge">noreferrer</code> – Mencegah pengiriman informasi referensi ke halaman tujuan.</li>
+    </ul>
+
+    <p><strong>Contoh:</strong></p>
+    <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://www.example.com"</span>
+  <span class="na">target=</span><span class="s">"_blank"</span> <span class="na">rel=</span><span class="s">"nofollow 
+  noopener noreferrer"</span><span class="nt">&gt;</span>
+  Kunjungi Example dengan Aman
+  <span class="nt">&lt;/a&gt;</span>
+</code></pre></div>    </div>
+  </li>
+  <li><strong><code class="language-plaintext highlighter-rouge">download</code></strong> – Menginstruksikan browser untuk mengunduh file daripada membukanya.<br />
+  <strong>Contoh:</strong>
+    <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"file.pdf"</span> <span class="na">download</span><span class="nt">&gt;</span>
+  Unduh File PDF<span class="nt">&lt;/a&gt;</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h3 id="c-nilai-untuk-atribut-target"><strong>C. Nilai untuk Atribut <code class="language-plaintext highlighter-rouge">target</code></strong></h3>
+<p>Berikut adalah nilai yang dapat digunakan pada atribut <code class="language-plaintext highlighter-rouge">target</code>:</p>
+
+<ul>
+  <li><strong><code class="language-plaintext highlighter-rouge">_self</code></strong> – <em>(Default)</em> Membuka link di tab/jendela saat ini.</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">_blank</code></strong> – Membuka link di tab/jendela baru.</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">_parent</code></strong> – Membuka link di jendela induk (jika ada).</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">_top</code></strong> – Membuka link di jendela penuh (keluar dari frame).</li>
+</ul>
+
+<p><strong>Contoh:</strong></p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://www.example.com"</span> 
+<span class="na">target=</span><span class="s">"_blank"</span><span class="nt">&gt;</span>
+Buka di Tab Baru<span class="nt">&lt;/a&gt;</span>
+</code></pre></div></div>
+<h3 id="d-nilai-untuk-atribut-rel"><strong>D. Nilai untuk Atribut <code class="language-plaintext highlighter-rouge">rel</code></strong></h3>
+<p>Berikut adalah nilai yang umum digunakan pada atribut <code class="language-plaintext highlighter-rouge">rel</code>:</p>
+
+<ul>
+  <li><strong><code class="language-plaintext highlighter-rouge">nofollow</code></strong> – Memberitahu mesin pencari untuk tidak mengikuti link ini.</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">noopener</code></strong> – Mencegah halaman baru mengakses <code class="language-plaintext highlighter-rouge">window.opener</code>.</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">noreferrer</code></strong> – Mencegah pengiriman informasi referensi ke halaman tujuan.</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">alternate</code></strong> – Menunjukkan versi alternatif dari halaman saat ini.</li>
+</ul>
+
+<p><strong>Contoh:</strong></p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://www.example.com"</span> 
+<span class="na">target=</span><span class="s">"_blank"</span> 
+<span class="na">rel=</span><span class="s">"noopener noreferrer"</span><span class="nt">&gt;</span>
+Kunjungi Example dengan Aman
+<span class="nt">&lt;/a&gt;</span>
+</code></pre></div></div>
+
+<h2 id="2-lists-daftar-pada-html"><strong>2. Lists (Daftar) pada HTML</strong></h2>
+<p>Lists digunakan untuk menyusun konten secara terstruktur dalam format daftar. HTML menyediakan tiga jenis utama daftar:</p>
+
+<hr />
+
+<h3 id="a-ordered-list-ol"><strong>A. Ordered List (<code class="language-plaintext highlighter-rouge">&lt;ol&gt;</code>)</strong></h3>
+<p><code class="language-plaintext highlighter-rouge">Ordered List</code> digunakan untuk membuat daftar terurut (menggunakan angka, huruf, atau simbol).</p>
+
+<h4 id="sintaks-dasar"><strong>Sintaks Dasar:</strong></h4>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;ol&gt;</span>
+    <span class="nt">&lt;li&gt;</span>Item 1<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;</span>Item 2<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;</span>Item 3<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ol&gt;</span>
+</code></pre></div></div>
+<h3 id="-atribut-pada-ol">🔹 <strong>Atribut pada <code class="language-plaintext highlighter-rouge">&lt;ol&gt;</code></strong></h3>
+<p>Berikut adalah atribut yang umum digunakan pada elemen <code class="language-plaintext highlighter-rouge">&lt;ol&gt;</code>:</p>
+
+<ul>
+  <li><strong><code class="language-plaintext highlighter-rouge">type</code></strong> – Menentukan tipe penomoran dalam daftar.<br />
+  Nilai yang tersedia:
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">"1"</code> → Angka (default)</li>
+      <li><code class="language-plaintext highlighter-rouge">"A"</code> → Huruf kapital</li>
+      <li><code class="language-plaintext highlighter-rouge">"a"</code> → Huruf kecil</li>
+      <li><code class="language-plaintext highlighter-rouge">"I"</code> → Angka romawi kapital</li>
+      <li><code class="language-plaintext highlighter-rouge">"i"</code> → Angka romawi kecil</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong><code class="language-plaintext highlighter-rouge">start</code></strong> – Menentukan nomor awal dari daftar (dalam format angka).</p>
+  </li>
+  <li><strong><code class="language-plaintext highlighter-rouge">reversed</code></strong> – Menampilkan daftar dalam urutan terbalik (tidak memerlukan nilai).</li>
+</ul>
+
+<hr />
+
+<h4 id="contoh-dengan-atribut"><strong>Contoh dengan Atribut:</strong></h4>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;ol</span> <span class="na">type=</span><span class="s">"A"</span> <span class="na">start=</span><span class="s">"5"</span> <span class="na">reversed</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li&gt;</span>Item 5<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;</span>Item 4<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;</span>Item 3<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ol&gt;</span>
+</code></pre></div></div>
+<h3 id="b-unordered-list-ul"><strong>B. Unordered List (<code class="language-plaintext highlighter-rouge">&lt;ul&gt;</code>)</strong></h3>
+<p><code class="language-plaintext highlighter-rouge">Unordered List</code> digunakan untuk membuat daftar tidak terurut (menggunakan simbol seperti lingkaran, kotak, atau titik).</p>
+
+<hr />
+
+<h4 id="sintaks-dasar-1"><strong>Sintaks Dasar:</strong></h4>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;ul&gt;</span>
+    <span class="nt">&lt;li&gt;</span>Item 1<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;</span>Item 2<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;</span>Item 3<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+</code></pre></div></div>
+<h3 id="-atribut-pada-ul">🔹 <strong>Atribut pada <code class="language-plaintext highlighter-rouge">&lt;ul&gt;</code></strong></h3>
+<p>Berikut adalah atribut yang umum digunakan pada elemen <code class="language-plaintext highlighter-rouge">&lt;ul&gt;</code>:</p>
+
+<ul>
+  <li><strong><code class="language-plaintext highlighter-rouge">type</code></strong> – Menentukan simbol untuk setiap item dalam daftar.<br />
+  Nilai yang tersedia:
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">"disc"</code> → Lingkaran hitam (default)</li>
+      <li><code class="language-plaintext highlighter-rouge">"circle"</code> → Lingkaran kosong</li>
+      <li><code class="language-plaintext highlighter-rouge">"square"</code> → Kotak hitam</li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<h4 id="contoh-dengan-atribut-1"><strong>Contoh dengan Atribut:</strong></h4>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;ul</span> <span class="na">type=</span><span class="s">"circle"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li&gt;</span>Apel<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;</span>Pisang<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+</code></pre></div></div>
+
+<h2 id="3-gabungan-link-dan-list"><strong>3. Gabungan Link dan List</strong></h2>
+<p>Berikut adalah contoh penggunaan <strong>link</strong> di dalam <strong>list</strong> untuk menautkan ke sumber daya terkait:</p>
+
+<hr />
+
+<h4 id="contoh"><strong>Contoh:</strong></h4>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;h2&gt;</span>Daftar Teknologi Web<span class="nt">&lt;/h2&gt;</span>
+<span class="nt">&lt;ol&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"https://developer.mozilla
+    .org/en-US/docs/Web/HTML"</span><span class="nt">&gt;</span>HTML<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"https://developer.mozilla
+    .org/en-US/docs/Web/CSS"</span><span class="nt">&gt;</span>CSS<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"https://developer.mozilla
+    .org/en-US/docs/Web/JavaScript"</span><span class="nt">&gt;</span>
+    JavaScript<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;/ol&gt;</span>
+</code></pre></div></div>
+
+<h2 id="kesimpulan"><strong>Kesimpulan</strong></h2>
+<p><strong>Link (<code class="language-plaintext highlighter-rouge">&lt;a&gt;</code>)</strong> → Digunakan untuk navigasi antar halaman atau sumber daya.<br />
+ <strong>Ordered List (<code class="language-plaintext highlighter-rouge">&lt;ol&gt;</code>)</strong> → Daftar terurut (menggunakan angka, huruf, atau simbol).<br />
+ <strong>Unordered List (<code class="language-plaintext highlighter-rouge">&lt;ul&gt;</code>)</strong> → Daftar tidak terurut (menggunakan bullet).</p>]]></content><author><name></name></author><summary type="html"><![CDATA[Penjelasan tentang Link dan Lists pada HTML.]]></summary></entry><entry><title type="html">Layout dan Navigation</title><link href="http://localhost:4000/2025/03/13/layout-dan-navigation.html" rel="alternate" type="text/html" title="Layout dan Navigation" /><published>2025-03-13T00:00:00+07:00</published><updated>2025-03-13T00:00:00+07:00</updated><id>http://localhost:4000/2025/03/13/layout-dan-navigation</id><content type="html" xml:base="http://localhost:4000/2025/03/13/layout-dan-navigation.html"><![CDATA[<p>Penjelasan tentang Layout dan Navigation</p>
+
+<h1 id="layout-dan-navigasi"><strong>Layout dan Navigasi</strong></h1>
+
+<h2 id="1-layout"><strong>1. Layout</strong></h2>
+<h3 id="pengertian-layout"><strong>Pengertian Layout</strong></h3>
+<p>Layout adalah pengaturan elemen-elemen visual pada suatu antarmuka atau halaman. Tujuan utama dari layout adalah untuk menciptakan struktur yang jelas dan mempermudah pengguna dalam memahami serta berinteraksi dengan konten.</p>
+
+<hr />
+
+<h3 id="fungsi-layout"><strong>Fungsi Layout</strong></h3>
+<ul>
+  <li><strong>Meningkatkan keterbacaan dan keteraturan</strong> – Membantu pengguna dalam memahami hierarki informasi.</li>
+  <li><strong>Mengarahkan perhatian pengguna</strong> – Menyoroti elemen-elemen penting seperti tombol CTA (Call to Action) atau pesan penting.</li>
+  <li><strong>Meningkatkan efisiensi</strong> – Menyusun elemen sehingga mempermudah pengguna dalam menemukan informasi atau menyelesaikan tugas.</li>
+  <li><strong>Estetika dan daya tarik</strong> – Menjadikan tampilan antarmuka menarik secara visual dan konsisten.</li>
+</ul>
+
+<hr />
+
+<h3 id="prinsip-prinsip-layout"><strong>Prinsip-Prinsip Layout</strong></h3>
+<ol>
+  <li><strong>Alignment (Penyelarasan)</strong>
+    <ul>
+      <li>Menata elemen secara konsisten (kiri, kanan, tengah) untuk menciptakan keteraturan.</li>
+      <li>Menyelaraskan elemen antar bagian agar terlihat rapi dan mudah dipahami.</li>
+    </ul>
+  </li>
+  <li><strong>Proximity (Kedekatan)</strong>
+    <ul>
+      <li>Elemen yang berhubungan dikelompokkan bersama untuk menunjukkan hubungan antar elemen.</li>
+      <li>Elemen yang memiliki fungsi serupa harus ditempatkan berdekatan.</li>
+    </ul>
+  </li>
+  <li><strong>Repetition (Pengulangan)</strong>
+    <ul>
+      <li>Gunakan gaya, warna, font, dan elemen desain yang sama secara konsisten untuk menciptakan kesatuan.</li>
+      <li>Misalnya, gunakan warna dan bentuk tombol yang sama di seluruh halaman.</li>
+    </ul>
+  </li>
+  <li><strong>Contrast (Kontras)</strong>
+    <ul>
+      <li>Gunakan perbedaan warna, ukuran, atau gaya untuk membedakan elemen penting dan menarik perhatian pengguna.</li>
+      <li>Contoh: Tombol CTA berwarna mencolok dibanding elemen lainnya.</li>
+    </ul>
+  </li>
+  <li><strong>White Space (Ruang Kosong)</strong>
+    <ul>
+      <li>Berikan ruang kosong di sekitar elemen untuk memberikan “napas” dan mengurangi kebingungan.</li>
+      <li>Ruang kosong meningkatkan fokus pada elemen penting.</li>
+    </ul>
+  </li>
+</ol>
+
+<hr />
+
+<h3 id="jenis-layout-umum"><strong>Jenis Layout Umum</strong></h3>
+<ol>
+  <li><strong>Single-Column Layout</strong>
+    <ul>
+      <li>Menggunakan satu kolom untuk menyusun konten secara vertikal.</li>
+      <li>Cocok untuk perangkat mobile atau desain minimalis.</li>
+    </ul>
+  </li>
+  <li><strong>Multi-Column Layout</strong>
+    <ul>
+      <li>Membagi halaman menjadi dua atau lebih kolom untuk menyusun konten secara horizontal dan vertikal.</li>
+      <li>Cocok untuk desktop dan tampilan dengan banyak informasi.</li>
+    </ul>
+  </li>
+  <li><strong>Grid-Based Layout</strong>
+    <ul>
+      <li>Menggunakan sistem grid untuk menyusun elemen dengan keteraturan dan konsistensi.</li>
+      <li>Banyak digunakan dalam desain web modern (CSS Grid, Bootstrap).</li>
+    </ul>
+  </li>
+  <li><strong>Card-Based Layout</strong>
+    <ul>
+      <li>Menyusun konten dalam bentuk kartu yang dapat dipindahkan atau diubah ukurannya.</li>
+      <li>Digunakan dalam platform seperti Pinterest dan Trello.</li>
+    </ul>
+  </li>
+  <li><strong>Split-Screen Layout</strong>
+    <ul>
+      <li>Membagi layar menjadi dua bagian yang sejajar, cocok untuk membandingkan informasi atau menampilkan dua jenis konten berbeda.</li>
+    </ul>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="2-navigasi"><strong>2. Navigasi</strong></h2>
+<h3 id="pengertian-navigasi"><strong>Pengertian Navigasi</strong></h3>
+<p>Navigasi adalah cara pengguna berpindah antar halaman atau bagian dalam sebuah aplikasi atau situs web. Navigasi yang efektif memungkinkan pengguna menemukan informasi dengan cepat dan mudah tanpa merasa bingung.</p>
+
+<hr />
+
+<h3 id="fungsi-navigasi"><strong>Fungsi Navigasi</strong></h3>
+<ul>
+  <li><strong>Mempermudah akses informasi</strong> – Membantu pengguna menemukan informasi yang mereka butuhkan.</li>
+  <li><strong>Meningkatkan pengalaman pengguna (UX)</strong> – Navigasi yang intuitif menciptakan kenyamanan dalam penggunaan.</li>
+  <li><strong>Mengurangi tingkat bounce rate</strong> – Jika pengguna mudah menemukan informasi, mereka akan bertahan lebih lama di situs atau aplikasi.</li>
+  <li><strong>Mengatur hierarki informasi</strong> – Menunjukkan struktur dan hubungan antar halaman atau bagian dalam aplikasi.</li>
+</ul>
+
+<hr />
+
+<h3 id="prinsip-prinsip-navigasi"><strong>Prinsip-Prinsip Navigasi</strong></h3>
+<ol>
+  <li><strong>Konsistensi</strong>
+    <ul>
+      <li>Posisi dan gaya navigasi harus konsisten di seluruh halaman.</li>
+      <li>Jika navigasi berada di bagian atas halaman, pastikan posisinya tidak berubah di halaman lain.</li>
+    </ul>
+  </li>
+  <li><strong>Hirarki yang Jelas</strong>
+    <ul>
+      <li>Gunakan struktur menu yang logis dan terorganisir (misalnya kategori utama → sub-kategori).</li>
+      <li>Menu utama harus menampilkan elemen penting dan langsung terlihat.</li>
+    </ul>
+  </li>
+  <li><strong>Feedback</strong>
+    <ul>
+      <li>Berikan umpan balik visual saat elemen navigasi diklik atau dihover (misalnya perubahan warna atau animasi).</li>
+      <li>Tunjukkan posisi pengguna saat ini dalam struktur navigasi (misalnya dengan breadcrumb).</li>
+    </ul>
+  </li>
+  <li><strong>Deskripsi yang Jelas</strong>
+    <ul>
+      <li>Gunakan nama menu atau tombol yang deskriptif dan mudah dimengerti.</li>
+      <li>Hindari istilah teknis yang membingungkan pengguna.</li>
+    </ul>
+  </li>
+  <li><strong>Menghindari Terlalu Banyak Pilihan</strong>
+    <ul>
+      <li>Jangan memberikan terlalu banyak opsi di menu utama untuk menghindari kebingungan (prinsip <strong>Hick’s Law</strong>).</li>
+      <li>Idealnya, gunakan 5–7 item menu utama.</li>
+    </ul>
+  </li>
+</ol>
+
+<hr />
+
+<h3 id="jenis-navigasi"><strong>Jenis Navigasi</strong></h3>
+<ol>
+  <li><strong>Navigasi Horizontal</strong>
+    <ul>
+      <li>Menu utama ditempatkan secara horizontal di bagian atas halaman.</li>
+      <li>Cocok untuk desktop dan website dengan banyak kategori.</li>
+    </ul>
+  </li>
+  <li><strong>Navigasi Vertikal</strong>
+    <ul>
+      <li>Menu utama ditampilkan di sisi kiri atau kanan halaman dalam bentuk kolom.</li>
+      <li>Cocok untuk desain dashboard atau aplikasi kompleks.</li>
+    </ul>
+  </li>
+  <li><strong>Hamburger Menu</strong>
+    <ul>
+      <li>Ikon berbentuk tiga garis horizontal yang membuka menu tersembunyi saat diklik.</li>
+      <li>Digunakan pada aplikasi mobile dan website responsif.</li>
+    </ul>
+  </li>
+  <li><strong>Breadcrumb Navigation</strong>
+    <ul>
+      <li>Menunjukkan posisi pengguna dalam hierarki halaman.</li>
+      <li>Contoh: <strong>Home &gt; Produk &gt; Pakaian &gt; Kemeja</strong></li>
+    </ul>
+  </li>
+  <li><strong>Footer Navigation</strong>
+    <ul>
+      <li>Navigasi tambahan yang ditempatkan di bagian bawah halaman (biasanya berisi tautan ke kebijakan privasi, kontak, dan FAQ).</li>
+    </ul>
+  </li>
+  <li><strong>Sidebar Navigation</strong>
+    <ul>
+      <li>Ditempatkan di sisi kiri atau kanan, biasanya berisi menu kategori atau filter.</li>
+      <li>Digunakan dalam e-commerce dan aplikasi analitik.</li>
+    </ul>
+  </li>
+  <li><strong>Tab Navigation</strong>
+    <ul>
+      <li>Menyusun beberapa opsi dalam bentuk tab untuk berpindah antar konten.</li>
+      <li>Cocok untuk aplikasi berbasis data atau pengaturan.</li>
+    </ul>
+  </li>
+</ol>
+
+<hr />
+
+<h3 id="contoh-praktis-navigasi-yang-efektif"><strong>Contoh Praktis Navigasi yang Efektif</strong></h3>
+<p>✅ Gunakan <strong>highlight</strong> pada menu yang sedang aktif untuk menunjukkan posisi pengguna.<br />
+✅ Berikan <strong>ikon pendukung</strong> untuk memudahkan pemahaman.<br />
+✅ Gunakan <strong>hover effect</strong> dan <strong>animation</strong> ringan untuk memberikan feedback.<br />
+✅ Pastikan <strong>menu dropdown</strong> dapat diakses dengan cepat tanpa keterlambatan.<br />
+✅ Pastikan navigasi <strong>responsif</strong> pada semua perangkat (desktop, tablet, dan mobile).</p>
+
+<hr />
+
+<h2 id="️-hubungan-antara-layout-dan-navigasi"><strong>➡️ Hubungan Antara Layout dan Navigasi</strong></h2>
+<ul>
+  <li><strong>Layout</strong> menentukan bagaimana elemen navigasi akan ditempatkan dalam antarmuka.</li>
+  <li><strong>Navigasi</strong> memungkinkan pengguna untuk berpindah antar elemen yang telah diatur dalam layout.</li>
+  <li>Kombinasi layout yang rapi dan navigasi yang intuitif menciptakan <strong>pengalaman pengguna (UX) yang lancar</strong> dan meningkatkan <strong>konversi</strong>.</li>
+</ul>
+
+<hr />
+
+<h2 id="-kesimpulan">🎯 <strong>Kesimpulan</strong></h2>
+<ul>
+  <li><strong>Layout</strong> berfokus pada pengaturan elemen visual untuk menciptakan struktur yang rapi dan menarik.</li>
+  <li><strong>Navigasi</strong> bertugas memandu pengguna untuk berpindah antar elemen dan menemukan informasi dengan mudah.</li>
+  <li>Keduanya harus dirancang secara <strong>konsisten</strong> dan <strong>terintegrasi</strong> untuk menciptakan pengalaman pengguna yang optimal.</li>
+  <li></li>
+</ul>]]></content><author><name></name></author><summary type="html"><![CDATA[Penjelasan tentang Layout dan Navigation]]></summary></entry><entry><title type="html">Markdown</title><link href="http://localhost:4000/2025/03/06/markdown.html" rel="alternate" type="text/html" title="Markdown" /><published>2025-03-06T00:00:00+07:00</published><updated>2025-03-06T00:00:00+07:00</updated><id>http://localhost:4000/2025/03/06/markdown</id><content type="html" xml:base="http://localhost:4000/2025/03/06/markdown.html"><![CDATA[<p>Penjelasan tentang markdown</p>
+
+<h1 id="-markdown-penjelasan-lengkap">📝 Markdown: Penjelasan Lengkap</h1>
+
+<h2 id="-sejarah-markdown">🔎 Sejarah Markdown</h2>
+<p>
+Markdown pertama kali diperkenalkan oleh <strong>John Gruber</strong> dan <strong>Aaron Swartz</strong> pada tahun <strong>2004</strong>. Tujuannya adalah untuk membuat format teks yang dapat dibaca secara mudah oleh manusia, tetapi juga dapat dikonversi menjadi HTML secara otomatis. Filosofi utama Markdown adalah <strong>"mudah dibaca dan mudah ditulis."</strong>
+</p>
+
+<hr />
+
+<h2 id="-sintaks-dasar-markdown">📄 Sintaks Dasar Markdown</h2>
+<p>
+Markdown menggunakan simbol sederhana seperti <code>#</code>, <code>*</code>, <code>-</code>, dan <code>`</code> untuk memformat teks. Berikut adalah <strong>sintaks dasar</strong> dalam <strong>Markdown</strong>:
+</p>
+
+<h3 id="1-heading-judul">1. <strong>Heading (Judul)</strong></h3>
+<p>Gunakan tanda <code class="language-plaintext highlighter-rouge">#</code> untuk membuat heading dengan berbagai level:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Heading 1
+## Heading 2
+### Heading 3
+#### Heading 4
+##### Heading 5
+###### Heading 6
+</code></pre></div></div>
+
+<p><strong>Hasil:</strong></p>
+
+<h1 id="heading-1">Heading 1</h1>
+<h2 id="heading-2">Heading 2</h2>
+<h3 id="heading-3">Heading 3</h3>
+<h4 id="heading-4">Heading 4</h4>
+<h5 id="heading-5">Heading 5</h5>
+<h6 id="heading-6">Heading 6</h6>
+
+<hr />
+
+<h3 id="2-teks-tebal-miring-dan-coret">2. <strong>Teks Tebal, Miring, dan Coret</strong></h3>
+<ul>
+  <li><strong>Tebal</strong>: Gunakan <code class="language-plaintext highlighter-rouge">**</code> atau <code class="language-plaintext highlighter-rouge">__</code></li>
+  <li><em>Miring</em>: Gunakan <code class="language-plaintext highlighter-rouge">*</code> atau <code class="language-plaintext highlighter-rouge">_</code></li>
+  <li><del>Coret</del>: Gunakan <code class="language-plaintext highlighter-rouge">~~</code></li>
+</ul>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gs">**Teks Tebal**</span> atau __Teks Tebal__
+<span class="ge">*Teks Miring*</span> atau _Teks Miring_
+~~Teks Dicoret~~
+</code></pre></div></div>
+
+<p><strong>Hasil:</strong></p>
+
+<p><strong>Teks Tebal</strong><br />
+<em>Teks Miring</em><br />
+<del>Teks Dicoret</del></p>
+
+<hr />
+
+<h3 id="3-daftar-list">3. <strong>Daftar (List)</strong></h3>
+<h4 id="️-daftar-tak-berurutan-unordered-list">➡️ Daftar Tak Berurutan (Unordered List)</h4>
+<p>Gunakan <code class="language-plaintext highlighter-rouge">-</code>, <code class="language-plaintext highlighter-rouge">+</code>, atau <code class="language-plaintext highlighter-rouge">*</code> diikuti dengan spasi:</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">-</span> Item 1
+<span class="p">-</span> Item 2
+<span class="p">  -</span> Sub-item 2.1
+<span class="p">  -</span> Sub-item 2.2
+<span class="p">-</span> Item 3
+</code></pre></div></div>
+
+<p><strong>Hasil:</strong></p>
+<ul>
+  <li>Item 1</li>
+  <li>Item 2
+    <ul>
+      <li>Sub-item 2.1</li>
+      <li>Sub-item 2.2</li>
+    </ul>
+  </li>
+  <li>Item 3</li>
+</ul>
+
+<h4 id="️-daftar-berurutan-ordered-list">➡️ Daftar Berurutan (Ordered List)</h4>
+<p>Gunakan angka diikuti dengan titik (<code class="language-plaintext highlighter-rouge">.</code>):</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">1.</span> Item pertama
+<span class="p">2.</span> Item kedua
+<span class="p">3.</span> Item ketiga
+</code></pre></div></div>
+
+<p><strong>Hasil:</strong></p>
+<ol>
+  <li>Item pertama</li>
+  <li>Item kedua</li>
+  <li>Item ketiga</li>
+</ol>
+
+<hr />
+
+<h3 id="4-tautan-link">4. <strong>Tautan (Link)</strong></h3>
+<p>Gunakan format berikut untuk membuat tautan:</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="nv">OpenAI</span><span class="p">](</span><span class="sx">https://www.openai.com</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><strong>Hasil:</strong><br />
+<a href="https://www.openai.com">OpenAI</a></p>
+
+<hr />
+
+<h3 id="5-gambar">5. <strong>Gambar</strong></h3>
+<p>Gunakan format <code class="language-plaintext highlighter-rouge">![teks alternatif](URL)</code> untuk menyisipkan gambar:</p>
+
+<p>
+![Logo Markdown](https://upload.wikimedia
+.org/wikipedia/commons/4/48/
+ Markdown-mark.svg)
+</p>
+
+<p><strong>Hasil:</strong><br />
+<img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Markdown-mark.svg" alt="Logo Markdown" /></p>
+
+<hr />
+
+<h3 id="6-kode-inline-dan-blok">6. <strong>Kode (Inline dan Blok)</strong></h3>
+<ul>
+  <li><strong>Kode inline</strong>: Gunakan <code class="language-plaintext highlighter-rouge">`</code> di awal dan akhir teks</li>
+  <li><strong>Blok kode</strong>: Gunakan tiga backtick (```) di awal dan akhir blok kode. Bisa ditentukan bahasa pemrograman untuk highlighting.</li>
+</ul>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Kode inline: <span class="sb">`print("Hello, world!")`</span>
+
+Blok kode:
+<span class="p">```</span><span class="nl">python
+</span><span class="k">def</span> <span class="nf">hello</span><span class="p">():</span>
+    <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">Hello, world!</span><span class="sh">"</span><span class="p">)</span>
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+**Hasil:**
+
+Kode inline: `print("Hello, world!")`
+
+Blok kode:
+```python
+def hello():
+    print("Hello, world!")
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="7-kutipan-blockquote">7. <strong>Kutipan (Blockquote)</strong></h3>
+<p>Gunakan <code class="language-plaintext highlighter-rouge">&gt;</code> di awal baris untuk membuat kutipan:</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gt">&gt; Ini adalah kutipan.</span>
+<span class="gt">&gt;&gt; Ini adalah kutipan bersarang.</span>
+</code></pre></div></div>
+
+<p><strong>Hasil:</strong></p>
+
+<blockquote>
+  <p>Ini adalah kutipan.</p>
+  <blockquote>
+    <p>Ini adalah kutipan bersarang.</p>
+  </blockquote>
+</blockquote>
+
+<hr />
+
+<h3 id="8-garis-pemisah-horizontal-line">8. <strong>Garis Pemisah (Horizontal Line)</strong></h3>
+<p>Gunakan <code class="language-plaintext highlighter-rouge">---</code>, <code class="language-plaintext highlighter-rouge">***</code>, atau <code class="language-plaintext highlighter-rouge">___</code> untuk membuat garis pemisah:</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">---</span>
+<span class="p">***</span>
+<span class="ge">__</span>_
+</code></pre></div></div>
+
+<p><strong>Hasil:</strong></p>
+
+<hr />
+
+<hr />
+
+<h3 id="9-tabel">9. <strong>Tabel</strong></h3>
+<p>Gunakan garis <code class="language-plaintext highlighter-rouge">|</code> untuk membuat tabel:</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>| Kolom 1 | Kolom 2 | Kolom 3 |
+|---------|---------|---------|
+| Data 1  | Data 2  | Data 3  |
+| Data 4  | Data 5  | Data 6  |
+</code></pre></div></div>
+
+<p><strong>Hasil:</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Kolom 1</th>
+      <th>Kolom 2</th>
+      <th>Kolom 3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Data 1</td>
+      <td>Data 2</td>
+      <td>Data 3</td>
+    </tr>
+    <tr>
+      <td>Data 4</td>
+      <td>Data 5</td>
+      <td>Data 6</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="-contoh-penggunaan-markdown">🎯 Contoh Penggunaan Markdown</h2>
+<ol>
+  <li><strong>Dokumentasi Kode</strong> – Digunakan di GitHub dan GitLab untuk README.md</li>
+  <li><strong>Catatan</strong> – Digunakan untuk mencatat di aplikasi seperti Obsidian atau Notion</li>
+  <li><strong>Blog</strong> – Beberapa platform blogging mendukung Markdown</li>
+  <li><strong>Presentasi</strong> – Alat seperti Marp atau Deckset mendukung Markdown</li>
+</ol>
+
+<hr />
+
+<h2 id="-keunggulan-markdown">🌟 Keunggulan Markdown</h2>
+<p>✅ Mudah dipelajari dan digunakan<br />
+✅ Tidak memerlukan editor khusus<br />
+✅ File teks Markdown (<code class="language-plaintext highlighter-rouge">.md</code>) ringan dan mudah dipindahkan<br />
+✅ Didukung oleh banyak platform (GitHub, GitLab, Jupyter Notebook, dll.)</p>
+
+<hr />
+
+<h2 id="-keterbatasan-markdown">🚫 Keterbatasan Markdown</h2>
+<p>❌ Fitur format terbatas dibanding HTML/CSS<br />
+❌ Tidak semua platform mendukung semua fitur Markdown<br />
+❌ Kurang fleksibel untuk tata letak yang kompleks</p>
+
+<hr />
+
+<h2 id="-varian-markdown">🏆 Varian Markdown</h2>
+<p>Beberapa platform menggunakan ekstensi atau varian Markdown untuk menambahkan fitur tambahan:</p>
+
+<ul>
+  <li><strong>GitHub Flavored Markdown (GFM)</strong> – Mendukung task list, mention, dan highlighting sintaks tambahan</li>
+  <li><strong>CommonMark</strong> – Standar resmi Markdown</li>
+  <li><strong>MultiMarkdown</strong> – Menambahkan fitur seperti catatan kaki dan tabel yang kompleks</li>
+</ul>
+
+<hr />
+
+<h2 id="-tips-dan-trik">💡 Tips dan Trik</h2>
+<p>✨ Gunakan ekstensi editor seperti <strong>Markdown Preview</strong> di VSCode untuk melihat hasil Markdown secara langsung.<br />
+✨ Tambahkan komentar di Markdown dengan <code class="language-plaintext highlighter-rouge">&lt;!-- komentar --&gt;</code> jika diperlukan.<br />
+✨ Gunakan GitHub Flavored Markdown (GFM) jika menulis untuk GitHub.</p>
+
+<hr />
+
+<h2 id="-kesimpulan">🚀 Kesimpulan</h2>
+<p>
+<strong>Markdown</strong> adalah bahasa markup ringan yang sangat berguna untuk menulis teks terformat dengan cara yang sederhana dan mudah dibaca. <strong>Fleksibilitas</strong> dan <strong>kesederhanaannya</strong> membuat <strong>Markdown</strong> menjadi pilihan populer di kalangan <strong>developer</strong>, <strong>penulis</strong>, dan <strong>content creator</strong>.
+</p>]]></content><author><name></name></author><summary type="html"><![CDATA[Penjelasan tentang markdown]]></summary></entry><entry><title type="html">Instalasi Ruby dan Jekyll</title><link href="http://localhost:4000/2025/02/20/instalasi-ruby-dan-jekyll.html" rel="alternate" type="text/html" title="Instalasi Ruby dan Jekyll" /><published>2025-02-20T00:00:00+07:00</published><updated>2025-02-20T00:00:00+07:00</updated><id>http://localhost:4000/2025/02/20/instalasi-ruby-dan-jekyll</id><content type="html" xml:base="http://localhost:4000/2025/02/20/instalasi-ruby-dan-jekyll.html"><![CDATA[<p>Penjelasan tentang instalasi ruby dan jekyll</p>
+
+<hr />
+
+<h2 id="1-instalasi"><strong>1. Instalasi</strong></h2>
+<h3 id="a-install-ruby-dan-jekyll">a) <strong>Install Ruby dan Jekyll</strong></h3>
+<ol>
+  <li><strong>Cek apakah Ruby sudah terpasang</strong><br />
+Buka terminal atau Command Prompt, lalu ketik:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ruby <span class="nt">-v</span>
+</code></pre></div>    </div>
+    <p>Jika Ruby sudah terpasang, maka akan muncul versi Ruby. Jika belum, ikuti langkah berikutnya.</p>
+  </li>
+  <li><strong>Cek RubyGems</strong><br />
+Ketik perintah berikut:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem <span class="nt">-v</span>
+</code></pre></div>    </div>
+  </li>
+  <li><strong>Cek GCC dan Make</strong><br />
+Ketik perintah berikut:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcc <span class="nt">-v</span>
+g++ <span class="nt">-v</span>
+make <span class="nt">-v</span>
+</code></pre></div>    </div>
+    <p>  
+Jika belum terpasang, install terlebih dahulu dengan <strong>MinGW</strong> (untuk Windows) atau gunakan package manager seperti <code>apt</code> (untuk Linux).  
+</p>
+  </li>
+</ol>
+<p>&lt;/p&gt;</p>
+
+<ol>
+  <li><strong>Download Ruby Installer</strong>
+    <ul>
+      <li>Buka link berikut: <a href="https://rubyinstaller.org">https://rubyinstaller.org</a></li>
+      <li>Pilih versi <strong>Ruby 2.7.0</strong> atau lebih tinggi.</li>
+      <li>Ikuti instruksi instalasi hingga selesai.</li>
+    </ul>
+  </li>
+  <li><strong>Install Jekyll dan Bundler</strong><br />
+Setelah Ruby terpasang, install Jekyll dan Bundler dengan perintah:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem <span class="nb">install </span>jekyll bundler
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<hr />
+
+<h3 id="b-install-git">b) <strong>Install Git</strong></h3>
+<ol>
+  <li><strong>Download Git Installer</strong>
+    <ul>
+      <li>Buka link berikut: <a href="https://git-scm.com">https://git-scm.com</a></li>
+      <li>Pilih installer yang sesuai dengan sistem operasi (contoh: <strong>64-bit untuk Windows</strong>).</li>
+    </ul>
+  </li>
+  <li><strong>Lakukan Instalasi</strong>
+    <ul>
+      <li>Ikuti instruksi instalasi hingga selesai.</li>
+      <li>Setelah selesai, cek apakah Git sudah terpasang dengan perintah:
+        <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git <span class="nt">--version</span>
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+</ol>
+
+<hr />
+
+<h3 id="c-install-visual-studio-code">c) <strong>Install Visual Studio Code</strong></h3>
+<ol>
+  <li><strong>Download VSCode Installer</strong>
+    <ul>
+      <li>Buka link berikut: <a href="https://code.visualstudio.com">https://code 
+.visualstudio.com</a></li>
+      <li>Pilih installer sesuai dengan sistem operasi (contoh: <strong>64-bit untuk Windows</strong>).</li>
+    </ul>
+  </li>
+  <li><strong>Lakukan Instalasi</strong>
+    <ul>
+      <li>Ikuti instruksi hingga selesai.</li>
+    </ul>
+  </li>
+</ol>
+
+<hr />
+
+<h3 id="d-install-google-chrome">d) <strong>Install Google Chrome</strong></h3>
+<ol>
+  <li><strong>Download Chrome Installer</strong>
+    <ul>
+      <li>Buka link berikut: <a href="https://www.google.com/chrome">https://www.
+google.com/chrome</a></li>
+      <li>Klik tombol <strong>Download Chrome</strong>.</li>
+      <li>Ikuti instruksi instalasi hingga selesai.</li>
+    </ul>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="2-personal-web-dengan-jekyll-dan-github-pages"><strong>2. Personal Web dengan Jekyll dan GitHub Pages</strong></h2>
+<h3 id="1-buat-akun-github"><strong>1. Buat Akun GitHub</strong></h3>
+<ul>
+  <li>Buka <a href="https://github.com">https://github.com</a> dan daftar akun.</li>
+</ul>
+
+<hr />
+
+<h3 id="2-buat-repository-github"><strong>2. Buat Repository GitHub</strong></h3>
+<ul>
+  <li>Buat repository baru dengan nama:
+    <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code> username.github.io
+</code></pre></div>    </div>
+    <p><strong>Contoh</strong>: Jika username GitHub kamu <code class="language-plaintext highlighter-rouge">faiza</code>, maka repository-nya adalah:</p>
+    <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code> faiza.github.io
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<hr />
+
+<h3 id="3-clone-repository-ke-lokal"><strong>3. Clone Repository ke Lokal</strong></h3>
+<p>Buka terminal atau Command Prompt, lalu jalankan:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/
+username/username.github.io.git
+</code></pre></div></div>
+<p><strong>(Ganti <code class="language-plaintext highlighter-rouge">username</code> dengan username GitHub kamu)</strong></p>
+
+<hr />
+
+<h3 id="4-inisialisasi-jekyll-di-folder-repository"><strong>4. Inisialisasi Jekyll di Folder Repository</strong></h3>
+<p>Masuk ke folder repository:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>username.github.io
+</code></pre></div></div>
+<p>Inisialisasi Jekyll:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle init
+</code></pre></div></div>
+<p>Perintah ini akan membuat file <code class="language-plaintext highlighter-rouge">Gemfile</code> di dalam folder proyek.</p>
+
+<hr />
+
+<h3 id="5-edit-gemfile"><strong>5. Edit <code class="language-plaintext highlighter-rouge">Gemfile</code></strong></h3>
+<p>Buka file <code class="language-plaintext highlighter-rouge">Gemfile</code> di VSCode, lalu tambahkan kode berikut:</p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">source</span> <span class="s2">"https://rubygems.org"</span>
+
+<span class="n">gem</span> <span class="s2">"jekyll"</span>
+</code></pre></div></div>
+<p>Lalu jalankan perintah:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle <span class="nb">install</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="6-buat-file-indexhtml"><strong>6. Buat File <code class="language-plaintext highlighter-rouge">index.html</code></strong></h3>
+<p>Buat file baru bernama <code class="language-plaintext highlighter-rouge">index.html</code> di dalam folder proyek, lalu isi dengan kode berikut:</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+  <span class="nt">&lt;title&gt;</span>My Jekyll Site<span class="nt">&lt;/title&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+  <span class="nt">&lt;h1&gt;</span>Welcome to My Jekyll Site!<span class="nt">&lt;/h1&gt;</span>
+  <span class="nt">&lt;p&gt;</span>This is a sample site created with
+     Jekyll and GitHub Pages.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="7-build-dan-jalankan-jekyll"><strong>7. Build dan Jalankan Jekyll</strong></h3>
+<p>Jalankan perintah berikut untuk build website:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll build
+</code></pre></div></div>
+<p>Untuk menjalankan server Jekyll:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll serve
+</code></pre></div></div>
+<p>Cek di browser:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http://localhost:4000
+</code></pre></div></div>
+
+<p>💡 <strong>Tips:</strong> Jika ingin hasil perubahan otomatis terlihat di browser, jalankan dengan:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll serve <span class="nt">--livereload</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="8-edit-gemfilelock-untuk-platform-linux"><strong>8. Edit <code class="language-plaintext highlighter-rouge">Gemfile.lock</code> untuk Platform Linux</strong></h3>
+<p>Buka file <code class="language-plaintext highlighter-rouge">Gemfile.lock</code>, lalu tambahkan <strong>platform linux</strong> pada bagian <code class="language-plaintext highlighter-rouge">PLATFORMS</code>:</p>
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>PLATFORMS
+  ruby
+  x86_64-linux
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="9-push-repository-ke-github"><strong>9. Push Repository ke GitHub</strong></h3>
+<p>Setelah berhasil dijalankan secara lokal, upload ke GitHub dengan perintah:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add <span class="nb">.</span>
+git commit <span class="nt">-m</span> <span class="s2">"Initial commit"</span>
+git push origin main
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="10-buat-github-actions-untuk-cicd"><strong>10. Buat GitHub Actions untuk CI/CD</strong></h3>
+<ol>
+  <li>Di dalam repository GitHub, buat folder <code class="language-plaintext highlighter-rouge">.github/workflows</code>.</li>
+  <li>Buat file baru <code class="language-plaintext highlighter-rouge">jekyll.yml</code> di dalam folder tersebut, lalu tambahkan kode berikut:<br />
+```yaml
+name: Jekyll Deploy</li>
+</ol>
+
+<p>on:
+  push:
+    branches:
+      - main</p>
+
+<p>jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  - name: Setup Ruby
+    uses: ruby/setup-ruby@v1
+    with:
+      ruby-version: '2.7'
+
+  - name: Install dependencies
+    run: bundle install
+
+  - name: Build site
+    run: JEKYLL_ENV=production bundle exec 
+    jekyll build
+
+  - name: Deploy to GitHub Pages
+    uses: peaceiris/actions-gh-pages@v3
+    with:
+      github_token: $
+      publish_dir: ./_site ```
+</code></pre></div></div>
+
+<ol>
+  <li>Commit dan push ke GitHub:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add <span class="nb">.</span>
+git commit <span class="nt">-m</span> <span class="s2">"Add GitHub Actions for 
+Jekyll deployment"</span>
+git push origin main
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<hr />
+
+<h3 id="-selesai">✅ <strong>Selesai!</strong></h3>
+<p>Sekarang website kamu bisa diakses di:</p>
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://username.github.io
+</code></pre></div></div>
+<p>(Ganti <code class="language-plaintext highlighter-rouge">username</code> dengan username GitHub kamu)</p>
+
+<hr />
+
+<p>💡 <strong>Troubleshooting:</strong></p>
+<ul>
+  <li>Jika terjadi error karena <strong>port konflik</strong>, jalankan dengan perintah berikut:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll serve <span class="nt">--host</span> 0.0.0.0 <span class="nt">--port</span> 4001
+</code></pre></div>    </div>
+  </li>
+  <li>Jika build gagal, cek apakah Ruby dan Bundler sudah terpasang dengan benar.</li>
+  <li>Jika GitHub Pages tidak memuat, pastikan branch utama sudah diatur ke <code class="language-plaintext highlighter-rouge">main</code> di pengaturan repository.</li>
+  <li></li>
+</ul>]]></content><author><name></name></author><summary type="html"><![CDATA[Penjelasan tentang instalasi ruby dan jekyll]]></summary></entry></feed>
