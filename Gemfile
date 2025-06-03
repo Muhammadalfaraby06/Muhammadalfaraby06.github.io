@@ -5,7 +5,6 @@ source "https://rubygems.org"
 # gem "rails"
 
 gem "jekyll"
-gem "jekyll-feed"
 
 group :jekyll_plugins do
     gem "jekyll-sitemap"
