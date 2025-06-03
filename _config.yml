@@ -3,7 +3,7 @@ baseurl: "" # Jangan lupa isi jika repo bukan user/organization site
 url: "https://muhammadalfaraby06.github.io"
 
 sass:
-  sass_dir: assets/css
+  sass_dir: assets
   style: compressed
 
 theme: null
