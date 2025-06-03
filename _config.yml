@@ -12,7 +12,3 @@ theme: null
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-  - jekyll-github-metadata
-
-# Hapus bagian "gems" karena sudah tidak digunakan di Jekyll >= 3.5
-# Jika Anda menggunakan Jekyll versi baru, cukup gunakan "plugins" di atas
