@@ -1,20 +1,18 @@
- title: Home
- baseurl: ""
- url: "https://muhammadalfaraby06.github.io/"
+title: Home
+baseurl: "" # Jangan lupa isi jika repo bukan user/organization site
+url: "https://muhammadalfaraby06.github.io"
 
 sass:
   sass_dir: assets
   style: compressed
 
-theme : null
+theme: null
 
 # Daftar plugin yang diizinkan oleh GitHub Pages
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-github-metadata
-  # tambahkan plugin lain yang Anda butuhkan
 
-# Atau jika menggunakan versi Jekyll lama (kurang dari 3.5.0)
-gems:
-  - jekyll-feed
+# Hapus bagian "gems" karena sudah tidak digunakan di Jekyll >= 3.5
+# Jika Anda menggunakan Jekyll versi baru, cukup gunakan "plugins" di atas
