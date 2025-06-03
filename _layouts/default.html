@@ -1,26 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }}</title>
-    
-    <!-- stylesheet -->
-     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ page.title }}</title>
 
-    <!-- favicon -->
-     <link rel="icon" href="{{ site.baseurl }}/assets/images/favicon.ico">
+  <!-- stylesheet -->
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/styles.css" />
 
-    <!-- JavaScript -->
-     <script src="{{ site.baseurl }}/assets/js/scripts.js"></script>
+  <!-- favicon -->
+  <link rel="icon" href="{{ site.baseurl }}/assets/images/favicon.ico" />
 
-    <!-- plugins-->
-     {% feed_meta %}
-     {% seo %}
+  <!-- JavaScript -->
+  <script src="{{ site.baseurl }}/assets/js/scripts.js"></script>
 
+  <!-- plugins -->
+  {% feed_meta %}
+  {% seo %}
 </head>
 <body>
-    {% include navigation.html %}
-    {{ content }}
+  {% include navigation.html %}
+  {{ content }}
 </body>
 </html>
