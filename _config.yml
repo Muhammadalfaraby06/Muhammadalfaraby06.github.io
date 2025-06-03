@@ -5,8 +5,6 @@ url: "https://muhammadalfaraby06.github.io"
 sass:
   sass_dir: assets/css
   style: compressed
-  load_paths:
-    - assets/css
 
 theme: null
 
