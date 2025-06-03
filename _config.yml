@@ -8,7 +8,13 @@ sass:
 
 theme : null
 
+# Daftar plugin yang diizinkan oleh GitHub Pages
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-  - jekyll-sitemap
+  - jekyll-github-metadata
+  # tambahkan plugin lain yang Anda butuhkan
+
+# Atau jika menggunakan versi Jekyll lama (kurang dari 3.5.0)
+gems:
+  - jekyll-feed
