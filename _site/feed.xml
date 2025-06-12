@@ -1,4 +1,478 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-06-03T10:21:47+07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Home</title><entry><title type="html">Formspree</title><link href="http://localhost:4000/2025/05/14/Formspree.html" rel="alternate" type="text/html" title="Formspree" /><published>2025-05-14T00:00:00+07:00</published><updated>2025-05-14T00:00:00+07:00</updated><id>http://localhost:4000/2025/05/14/Formspree</id><content type="html" xml:base="http://localhost:4000/2025/05/14/Formspree.html"><![CDATA[<p>penjelasan tentang Formspree</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-06-12T11:18:53+07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Home</title><entry><title type="html">Bootstrap</title><link href="http://localhost:4000/2025/06/02/Bootstrap.html" rel="alternate" type="text/html" title="Bootstrap" /><published>2025-06-02T00:00:00+07:00</published><updated>2025-06-02T00:00:00+07:00</updated><id>http://localhost:4000/2025/06/02/Bootstrap</id><content type="html" xml:base="http://localhost:4000/2025/06/02/Bootstrap.html"><![CDATA[<p>penjelasan tentang Bootstrap</p>
+
+<h2 id="1-apa-itu-bootstrap"><strong>1. Apa Itu Bootstrap?</strong></h2>
+
+<p><strong>Bootstrap</strong> adalah framework <strong>HTML, CSS, dan JavaScript</strong> open-source yang digunakan untuk merancang tampilan dan komponen antarmuka pengguna (UI) yang <strong>resposif dan mobile-first</strong>.</p>
+
+<p>Dikembangkan oleh <strong>Twitter</strong> (oleh Mark Otto dan Jacob Thornton) dan pertama kali dirilis tahun 2011, Bootstrap kini telah mencapai versi 5.x dan digunakan oleh jutaan developer di seluruh dunia.</p>
+
+<h2 id="2-keunggulan-bootstrap"><strong>2. Keunggulan Bootstrap</strong></h2>
+
+<ul>
+  <li>✅ <strong>Mobile-First</strong>: Dirancang untuk tampil optimal di perangkat mobile.</li>
+  <li>✅ <strong>Responsif</strong>: Grid system fleksibel untuk tampilan multi-device.</li>
+  <li>✅ <strong>Cepat dan Efisien</strong>: Cukup pakai class tanpa harus tulis CSS dari nol.</li>
+  <li>✅ <strong>Konsistensi</strong>: Antarmuka yang seragam di berbagai browser.</li>
+  <li>✅ <strong>Komponen Lengkap</strong>: Tombol, navigasi, modal, form, alert, carousel, dan lainnya.</li>
+  <li>✅ <strong>Dokumentasi Lengkap</strong>: Bootstrap terkenal dengan dokumentasi yang jelas dan mudah dipahami.</li>
+</ul>
+
+<h2 id="3-cara-menggunakan-bootstrap"><strong>3. Cara Menggunakan Bootstrap</strong></h2>
+
+<h3 id="-a-menggunakan-cdn-cara-termudah">🔹 <strong>A. Menggunakan CDN (Cara Termudah)</strong></h3>
+
+<p>Tambahkan baris berikut ke dalam <code class="language-plaintext highlighter-rouge">&lt;head&gt;</code> dan sebelum penutup <code class="language-plaintext highlighter-rouge">&lt;body&gt;</code> di HTML kamu:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- CSS Bootstrap --&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
+
+<span class="c">&lt;!-- JS Bootstrap Bundle (termasuk Popper.js) --&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre></div></div>
+
+<h3 id="-b-menginstal-via-npm-untuk-proyek-build-dengan-webpackgulpvite">🔹 <strong>B. Menginstal via NPM (untuk proyek build dengan Webpack/Gulp/Vite)</strong></h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm <span class="nb">install </span>bootstrap
+</code></pre></div></div>
+
+<p>Lalu import di file JS atau SCSS kamu:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="dl">'</span><span class="s1">bootstrap/dist/css/bootstrap.min.css</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="dl">'</span><span class="s1">bootstrap/dist/js/bootstrap.bundle.min.js</span><span class="dl">'</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h2 id="4-komponen-penting-bootstrap"><strong>4. Komponen Penting Bootstrap</strong></h2>
+
+<p>Berikut beberapa <strong>komponen UI</strong> paling sering digunakan:</p>
+
+<h3 id="tombol"><strong>Tombol</strong></h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>Tombol Utama<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-danger"</span><span class="nt">&gt;</span>Hapus<span class="nt">&lt;/button&gt;</span>
+</code></pre></div></div>
+
+<h3 id="navbar-navigasi"><strong>Navbar (Navigasi)</strong></h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar navbar-expand-lg navbar-light bg-light"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"navbar-brand"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Logo<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;/nav&gt;</span>
+</code></pre></div></div>
+
+<h3 id="card"><strong>Card</strong></h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span> <span class="na">style=</span><span class="s">"width: 18rem;"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">class=</span><span class="s">"card-img-top"</span> <span class="na">alt=</span><span class="s">"Gambar"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Judul<span class="nt">&lt;/h5&gt;</span>
+    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Isi konten kartu.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<h3 id="formulir"><strong>Formulir</strong></h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;form&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"mb-3"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"email"</span> <span class="na">class=</span><span class="s">"form-label"</span><span class="nt">&gt;</span>Email<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"email"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"email"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+</code></pre></div></div>
+
+<h3 id="alert"><strong>Alert</strong></h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"alert alert-success"</span> <span class="na">role=</span><span class="s">"alert"</span><span class="nt">&gt;</span>
+  Data berhasil disimpan!
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<h3 id="modal-pop-up-dialog"><strong>Modal (Pop-up Dialog)</strong></h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- Tombol --&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">data-bs-toggle=</span><span class="s">"modal"</span> <span class="na">data-bs-target=</span><span class="s">"#myModal"</span><span class="nt">&gt;</span>
+  Buka Modal
+<span class="nt">&lt;/button&gt;</span>
+
+<span class="c">&lt;!-- Modal --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal fade"</span> <span class="na">id=</span><span class="s">"myModal"</span> <span class="na">tabindex=</span><span class="s">"-1"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-dialog"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-content"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-header"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"modal-title"</span><span class="nt">&gt;</span>Judul Modal<span class="nt">&lt;/h5&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn-close"</span> <span class="na">data-bs-dismiss=</span><span class="s">"modal"</span><span class="nt">&gt;&lt;/button&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-body"</span><span class="nt">&gt;</span>
+        Isi konten modal.
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<h2 id="5-kesimpulan"><strong>5. Kesimpulan</strong></h2>
+
+<p>Bootstrap adalah framework front-end yang <strong>mudah, cepat, dan powerful</strong> untuk membuat website yang <strong>responsive dan modern</strong>. Dengan sistem grid, komponen siap pakai, serta utilitas lengkap, kamu bisa membangun antarmuka pengguna dalam waktu singkat dan hasil profesional.</p>]]></content><author><name></name></author><summary type="html"><![CDATA[penjelasan tentang Bootstrap]]></summary></entry><entry><title type="html">Single Menu</title><link href="http://localhost:4000/2025/06/02/Single-Menu.html" rel="alternate" type="text/html" title="Single Menu" /><published>2025-06-02T00:00:00+07:00</published><updated>2025-06-02T00:00:00+07:00</updated><id>http://localhost:4000/2025/06/02/Single-Menu</id><content type="html" xml:base="http://localhost:4000/2025/06/02/Single-Menu.html"><![CDATA[<p>penjelasan tentang Single Menu</p>
+
+<h2 id="apa-itu-single-menu">Apa Itu <em>Single Menu</em>?</h2>
+
+<p><strong>Single Menu</strong> merujuk pada <strong>menu navigasi tunggal</strong> dalam sebuah website atau aplikasi. Biasanya ini adalah <strong>menu utama (main navigation)</strong> yang tidak bercabang banyak, sederhana, dan mudah diakses pengguna.</p>
+
+<h3 id="contoh">Contoh:</h3>
+
+<ul>
+  <li>Menu horisontal di bagian atas halaman seperti: <code class="language-plaintext highlighter-rouge">Home | About | Contact</code></li>
+  <li>Satu sidebar tetap tanpa submenu tersembunyi</li>
+  <li>Tampilan menu tunggal untuk website one-page</li>
+</ul>
+
+<p>Terima kasih! Sekarang kamu sedang membahas <strong>komponen Single Menu</strong> dalam konteks <strong>antarmuka pengguna (UI)</strong>, bukan navigasi. Jadi yang kamu maksud adalah jenis-jenis komponen input <strong>Single Choice dan Multiple Choice</strong> dalam sebuah menu/form. Berikut adalah penjelasan lengkapnya:</p>
+
+<h2 id="komponen-single-menu-pilihan-dalam-form">Komponen Single Menu (Pilihan dalam Form)</h2>
+
+<p>Komponen <strong>Single Menu</strong> di sini mengacu pada <strong>komponen UI yang digunakan untuk memilih satu atau beberapa opsi</strong> dari kumpulan pilihan. Ini sangat umum digunakan dalam form HTML dan aplikasi.</p>
+
+<h3 id="a--radio-button-pilihan-tunggal">a.  <strong>Radio Button (Pilihan Tunggal)</strong></h3>
+
+<h3 id="fungsi">Fungsi:</h3>
+
+<p>Memungkinkan <strong>hanya satu pilihan</strong> dari beberapa opsi.</p>
+
+<h3 id="contoh-html">Contoh HTML:</h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;p&gt;</span>Pilih jenis kelamin:<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"gender"</span> <span class="na">value=</span><span class="s">"male"</span><span class="nt">&gt;</span> Laki-laki<span class="nt">&lt;br&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"gender"</span> <span class="na">value=</span><span class="s">"female"</span><span class="nt">&gt;</span> Perempuan<span class="nt">&lt;br&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"gender"</span> <span class="na">value=</span><span class="s">"other"</span><span class="nt">&gt;</span> Lainnya
+</code></pre></div></div>
+
+<h4 id="karakteristik">Karakteristik:</h4>
+
+<ul>
+  <li>Memiliki <code class="language-plaintext highlighter-rouge">name</code> yang sama agar hanya satu yang bisa dipilih.</li>
+  <li>Digunakan saat pengguna <strong>harus memilih satu opsi</strong> dari beberapa.</li>
+</ul>
+
+<h3 id="b-button-choice-toggle-button--button-group">b. <strong>Button Choice (Toggle Button / Button Group)</strong></h3>
+
+<h3 id="fungsi-1">Fungsi:</h3>
+
+<p>Menampilkan pilihan seperti tombol biasa, tetapi hanya satu (atau beberapa) yang bisa aktif.</p>
+
+<h3 id="contoh-html-dengan-bootstrap-5">Contoh HTML (dengan Bootstrap 5):</h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-group"</span> <span class="na">role=</span><span class="s">"group"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">class=</span><span class="s">"btn-check"</span> <span class="na">name=</span><span class="s">"btnradio"</span> <span class="na">id=</span><span class="s">"btn1"</span> <span class="na">autocomplete=</span><span class="s">"off"</span> <span class="na">checked</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"btn btn-outline-primary"</span> <span class="na">for=</span><span class="s">"btn1"</span><span class="nt">&gt;</span>Option 1<span class="nt">&lt;/label&gt;</span>
+
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">class=</span><span class="s">"btn-check"</span> <span class="na">name=</span><span class="s">"btnradio"</span> <span class="na">id=</span><span class="s">"btn2"</span> <span class="na">autocomplete=</span><span class="s">"off"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"btn btn-outline-primary"</span> <span class="na">for=</span><span class="s">"btn2"</span><span class="nt">&gt;</span>Option 2<span class="nt">&lt;/label&gt;</span>
+
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">class=</span><span class="s">"btn-check"</span> <span class="na">name=</span><span class="s">"btnradio"</span> <span class="na">id=</span><span class="s">"btn3"</span> <span class="na">autocomplete=</span><span class="s">"off"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"btn btn-outline-primary"</span> <span class="na">for=</span><span class="s">"btn3"</span><span class="nt">&gt;</span>Option 3<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<h3 id="karakteristik-1">Karakteristik:</h3>
+
+<ul>
+  <li>Lebih interaktif dan stylish.</li>
+  <li>Berfungsi sama seperti radio button, tapi tampilannya seperti tombol.</li>
+</ul>
+
+<h3 id="c--checkbox-pilihan-ganda">c.  <strong>Checkbox (Pilihan Ganda)</strong></h3>
+
+<h3 id="fungsi-2">Fungsi:</h3>
+
+<p>Memungkinkan pengguna <strong>memilih lebih dari satu opsi</strong>.</p>
+
+<h3 id="contoh-html-1">Contoh HTML:</h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;p&gt;</span>Pilih hobi kamu:<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"hobby"</span> <span class="na">value=</span><span class="s">"reading"</span><span class="nt">&gt;</span> Membaca<span class="nt">&lt;br&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"hobby"</span> <span class="na">value=</span><span class="s">"music"</span><span class="nt">&gt;</span> Musik<span class="nt">&lt;br&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"hobby"</span> <span class="na">value=</span><span class="s">"sports"</span><span class="nt">&gt;</span> Olahraga
+</code></pre></div></div>
+
+<h3 id="karakteristik-2">Karakteristik:</h3>
+
+<ul>
+  <li>Cocok untuk data dengan pilihan <strong>lebih dari satu</strong> (multi-choice).</li>
+  <li>Tidak harus ada yang dipilih.</li>
+</ul>
+
+<h3 id="d--combo-box-drop-down-list">d.  <strong>Combo Box (Drop Down List)</strong></h3>
+
+<h3 id="fungsi-3">Fungsi:</h3>
+
+<p>Memungkinkan pengguna memilih <strong>satu atau beberapa opsi dari menu tarik turun</strong>.</p>
+
+<h3 id="contoh-html-2">Contoh HTML:</h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"city"</span><span class="nt">&gt;</span>Pilih kota:<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;select</span> <span class="na">id=</span><span class="s">"city"</span> <span class="na">name=</span><span class="s">"city"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"jakarta"</span><span class="nt">&gt;</span>Jakarta<span class="nt">&lt;/option&gt;</span>
+  <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"bandung"</span><span class="nt">&gt;</span>Bandung<span class="nt">&lt;/option&gt;</span>
+  <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"surabaya"</span><span class="nt">&gt;</span>Surabaya<span class="nt">&lt;/option&gt;</span>
+<span class="nt">&lt;/select&gt;</span>
+</code></pre></div></div>
+
+<h3 id="karakteristik-3">Karakteristik:</h3>
+
+<ul>
+  <li><strong>Hemat ruang</strong> karena hanya satu baris.</li>
+  <li>Ideal untuk pilihan yang <strong>banyak</strong>.</li>
+  <li>Bisa dibuat multiple jika diperlukan:</li>
+</ul>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;select</span> <span class="na">multiple</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;option&gt;</span>Item 1<span class="nt">&lt;/option&gt;</span>
+  <span class="nt">&lt;option&gt;</span>Item 2<span class="nt">&lt;/option&gt;</span>
+<span class="nt">&lt;/select&gt;</span>
+</code></pre></div></div>
+
+<h2 id="perbandingan-singkat">Perbandingan Singkat</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Komponen</th>
+      <th>Pilihan</th>
+      <th>Interaksi</th>
+      <th>Contoh Kasus</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Radio Button</td>
+      <td>Satu</td>
+      <td>Klik</td>
+      <td>Jenis Kelamin</td>
+    </tr>
+    <tr>
+      <td>Toggle Button</td>
+      <td>Satu</td>
+      <td>Klik</td>
+      <td>Pilihan Mode (Grid/List)</td>
+    </tr>
+    <tr>
+      <td>Checkbox</td>
+      <td>Banyak</td>
+      <td>Centang</td>
+      <td>Hobi, Fitur Produk</td>
+    </tr>
+    <tr>
+      <td>Combo Box</td>
+      <td>Satu atau banyak</td>
+      <td>Dropdown</td>
+      <td>Negara, Kota, Kategori</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="kesimpulan">Kesimpulan</h2>
+
+<p><strong>Single Menu</strong> cocok untuk situs dengan struktur sederhana dan tujuan yang jelas. Dengan desain yang bersih dan navigasi mudah, single menu memperkuat <strong>fokus konten</strong> dan <strong>user experience</strong>.</p>]]></content><author><name></name></author><summary type="html"><![CDATA[penjelasan tentang Single Menu]]></summary></entry><entry><title type="html">Dasar PHP</title><link href="http://localhost:4000/2025/06/02/Dasar-PHP.html" rel="alternate" type="text/html" title="Dasar PHP" /><published>2025-06-02T00:00:00+07:00</published><updated>2025-06-02T00:00:00+07:00</updated><id>http://localhost:4000/2025/06/02/Dasar-PHP</id><content type="html" xml:base="http://localhost:4000/2025/06/02/Dasar-PHP.html"><![CDATA[<p>penjelasan tentang  Dasar PHP</p>
+
+<h2 id="apa-itu-php">Apa Itu PHP?</h2>
+
+<p><strong>PHP (Hypertext Preprocessor)</strong> adalah bahasa pemrograman <strong>server-side</strong> yang dirancang untuk membuat halaman web dinamis. Artinya, PHP berjalan di server dan hasilnya dikirimkan ke browser dalam bentuk HTML.</p>
+
+<p>PHP digunakan untuk:</p>
+
+<ul>
+  <li>Memproses formulir HTML</li>
+  <li>Mengakses database (seperti MySQL)</li>
+  <li>Membuat sistem login</li>
+  <li>Mengelola file</li>
+  <li>Dan banyak lagi</li>
+</ul>
+
+<h2 id="cara-menjalankan-php">Cara Menjalankan PHP</h2>
+
+<p>Karena PHP berjalan di server, kamu butuh:</p>
+
+<ol>
+  <li><strong>Web Server</strong> seperti Apache</li>
+  <li><strong>PHP Interpreter</strong></li>
+  <li><strong>Database</strong> (opsional) seperti MySQL</li>
+</ol>
+
+<p>Cara termudah adalah dengan menginstal <strong>XAMPP</strong> atau <strong>Laragon</strong>:</p>
+
+<ul>
+  <li><a href="https://www.apachefriends.org/">Download XAMPP</a></li>
+  <li>Simpan file PHP di folder <code class="language-plaintext highlighter-rouge">htdocs</code></li>
+  <li>Akses lewat browser: <code class="language-plaintext highlighter-rouge">http://localhost/namafile.php</code></li>
+</ul>
+
+<h2 id="struktur-file-dasar-php">Struktur File Dasar PHP</h2>
+
+<p>File PHP memiliki ekstensi <strong><code class="language-plaintext highlighter-rouge">.php</code></strong>. Contoh:</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- hello.php --&gt;</span>
+<span class="cp">&lt;?php</span>
+  <span class="k">echo</span> <span class="s2">"Halo, dunia!"</span><span class="p">;</span>
+<span class="cp">?&gt;</span>
+</code></pre></div></div>
+
+<p>Ketika dibuka di browser melalui <code class="language-plaintext highlighter-rouge">localhost</code>, maka akan tampil:
+<code class="language-plaintext highlighter-rouge">Halo, dunia!</code></p>
+
+<h2 id="dasar-dasar-sintaks-php">Dasar-Dasar Sintaks PHP</h2>
+
+<h3 id="1-tag-pembuka-php">1. <strong>Tag Pembuka PHP</strong></h3>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<span class="c1">// Kode PHP ditulis di sini</span>
+<span class="cp">?&gt;</span>
+</code></pre></div></div>
+
+<h3 id="2-output">2. <strong>Output</strong></h3>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">echo</span> <span class="s2">"Teks yang dicetak"</span><span class="p">;</span>
+<span class="k">print</span> <span class="s2">"Ini juga mencetak teks"</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h3 id="3-variabel">3. <strong>Variabel</strong></h3>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$nama</span> <span class="o">=</span> <span class="s2">"Anggi"</span><span class="p">;</span>
+<span class="nv">$umur</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
+
+<span class="k">echo</span> <span class="s2">"Halo, nama saya </span><span class="nv">$nama</span><span class="s2"> dan umur saya </span><span class="nv">$umur</span><span class="s2"> tahun."</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h3 id="4-tipe-data">4. <strong>Tipe Data</strong></h3>
+
+<ul>
+  <li>String: <code class="language-plaintext highlighter-rouge">"teks"</code></li>
+  <li>Integer: <code class="language-plaintext highlighter-rouge">1, 10, -5</code></li>
+  <li>Float: <code class="language-plaintext highlighter-rouge">3.14</code></li>
+  <li>Boolean: <code class="language-plaintext highlighter-rouge">true</code>, <code class="language-plaintext highlighter-rouge">false</code></li>
+  <li>Array: <code class="language-plaintext highlighter-rouge">["apel", "jeruk"]</code></li>
+  <li>Object: (nanti dipelajari di OOP)</li>
+</ul>
+
+<h2 id="operator-dan-percabangan">Operator dan Percabangan</h2>
+
+<h3 id="1-operator-aritmatika">1. <strong>Operator Aritmatika</strong></h3>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$a</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+<span class="nv">$b</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+<span class="k">echo</span> <span class="nv">$a</span> <span class="o">+</span> <span class="nv">$b</span><span class="p">;</span>  <span class="c1">// Hasil: 7</span>
+<span class="k">echo</span> <span class="nv">$a</span> <span class="o">*</span> <span class="nv">$b</span><span class="p">;</span>  <span class="c1">// Hasil: 10</span>
+</code></pre></div></div>
+
+<h3 id="2-percabangan-if">2. <strong>Percabangan If</strong></h3>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$nilai</span> <span class="o">=</span> <span class="mi">75</span><span class="p">;</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="nv">$nilai</span> <span class="o">&gt;=</span> <span class="mi">80</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">echo</span> <span class="s2">"Nilai A"</span><span class="p">;</span>
+<span class="p">}</span> <span class="k">elseif</span> <span class="p">(</span><span class="nv">$nilai</span> <span class="o">&gt;=</span> <span class="mi">70</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">echo</span> <span class="s2">"Nilai B"</span><span class="p">;</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+  <span class="k">echo</span> <span class="s2">"Nilai C"</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="perulangan-looping">Perulangan (Looping)</h2>
+
+<h3 id="1-for">1. <strong>For</strong></h3>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="p">(</span><span class="nv">$i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="nv">$i</span> <span class="o">&lt;=</span> <span class="mi">5</span><span class="p">;</span> <span class="nv">$i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">echo</span> <span class="s2">"Angka: </span><span class="nv">$i</span><span class="s2"> &lt;br&gt;"</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="2-while">2. <strong>While</strong></h3>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="k">while</span> <span class="p">(</span><span class="nv">$i</span> <span class="o">&lt;=</span> <span class="mi">3</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">echo</span> <span class="s2">"Baris ke-</span><span class="nv">$i</span><span class="s2"> &lt;br&gt;"</span><span class="p">;</span>
+  <span class="nv">$i</span><span class="o">++</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="form-dan-_get--_post">Form dan $_GET / $_POST</h2>
+
+<h3 id="form-html--php">Form HTML + PHP</h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">"proses.php"</span> <span class="na">method=</span><span class="s">"post"</span><span class="nt">&gt;</span>
+  Nama: <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"nama"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">value=</span><span class="s">"Kirim"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+</code></pre></div></div>
+
+<h3 id="file-prosesphp">File <code class="language-plaintext highlighter-rouge">proses.php</code></h3>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<span class="nv">$nama</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s1">'nama'</span><span class="p">];</span>
+<span class="k">echo</span> <span class="s2">"Halo, </span><span class="nv">$nama</span><span class="s2">!"</span><span class="p">;</span>
+<span class="cp">?&gt;</span>
+</code></pre></div></div>
+
+<h2 id="array">Array</h2>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$buah</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"apel"</span><span class="p">,</span> <span class="s2">"mangga"</span><span class="p">,</span> <span class="s2">"jeruk"</span><span class="p">];</span>
+<span class="k">echo</span> <span class="nv">$buah</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span> <span class="c1">// mangga</span>
+
+<span class="k">foreach</span> <span class="p">(</span><span class="nv">$buah</span> <span class="k">as</span> <span class="nv">$item</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">echo</span> <span class="nv">$item</span> <span class="mf">.</span> <span class="s2">"&lt;br&gt;"</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="mengakses-database-mysql">Mengakses Database MySQL</h2>
+
+<h3 id="1-koneksi-database">1. Koneksi Database</h3>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$conn</span> <span class="o">=</span> <span class="nb">mysqli_connect</span><span class="p">(</span><span class="s2">"localhost"</span><span class="p">,</span> <span class="s2">"root"</span><span class="p">,</span> <span class="s2">""</span><span class="p">,</span> <span class="s2">"nama_database"</span><span class="p">);</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nv">$conn</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">die</span><span class="p">(</span><span class="s2">"Koneksi gagal: "</span> <span class="mf">.</span> <span class="nf">mysqli_connect_error</span><span class="p">());</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="2-menampilkan-data">2. Menampilkan Data</h3>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$result</span> <span class="o">=</span> <span class="nf">mysqli_query</span><span class="p">(</span><span class="nv">$conn</span><span class="p">,</span> <span class="s2">"SELECT * FROM mahasiswa"</span><span class="p">);</span>
+
+<span class="k">while</span> <span class="p">(</span><span class="nv">$row</span> <span class="o">=</span> <span class="nf">mysqli_fetch_assoc</span><span class="p">(</span><span class="nv">$result</span><span class="p">))</span> <span class="p">{</span>
+  <span class="k">echo</span> <span class="nv">$row</span><span class="p">[</span><span class="s1">'nama'</span><span class="p">]</span> <span class="mf">.</span> <span class="s2">"&lt;br&gt;"</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="fungsi-php">Fungsi PHP</h2>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">function</span> <span class="n">sapa</span><span class="p">(</span><span class="nv">$nama</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="s2">"Halo, </span><span class="nv">$nama</span><span class="s2">!"</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">echo</span> <span class="nf">sapa</span><span class="p">(</span><span class="s2">"Alya"</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h2 id="-file-dan-include">📦 File dan Include</h2>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// file: header.php</span>
+<span class="k">echo</span> <span class="s2">"&lt;h1&gt;Header Website&lt;/h1&gt;"</span><span class="p">;</span>
+
+<span class="c1">// file utama:</span>
+<span class="k">include</span> <span class="s1">'header.php'</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h2 id="fitur-tambahan-lanjutan">Fitur Tambahan (lanjutan)</h2>
+
+<ul>
+  <li>Session &amp; Cookie</li>
+  <li>Upload File</li>
+  <li>Validasi Form</li>
+  <li>Login &amp; Register</li>
+  <li>OOP (Pemrograman Berorientasi Objek)</li>
+</ul>
+
+<h2 id="kesimpulan">Kesimpulan</h2>
+
+<p>PHP adalah bahasa yang <strong>mudah dipelajari</strong>, <strong>berkembang pesat</strong>, dan <strong>digunakan secara luas</strong> di pengembangan web. Jika kamu ingin membuat website dinamis, memahami PHP adalah <strong>langkah awal yang sangat bagus</strong>.</p>]]></content><author><name></name></author><summary type="html"><![CDATA[penjelasan tentang Dasar PHP]]></summary></entry><entry><title type="html">Formspree</title><link href="http://localhost:4000/2025/05/14/Formspree.html" rel="alternate" type="text/html" title="Formspree" /><published>2025-05-14T00:00:00+07:00</published><updated>2025-05-14T00:00:00+07:00</updated><id>http://localhost:4000/2025/05/14/Formspree</id><content type="html" xml:base="http://localhost:4000/2025/05/14/Formspree.html"><![CDATA[<p>penjelasan tentang Formspree</p>
 
 <h2 id="apa-itu-formspree"><strong>Apa itu Formspree</strong></h2>
 <p>Formspree adalah layanan pihak ketiga berbasis web yang memungkinkan pengembang dan desainer web menghubungkan formulir HTML di website mereka dengan alamat email tanpa memerlukan kode backend (seperti PHP, Node.js, Python, dsb.).</p>
@@ -1047,567 +1521,4 @@ function konfirmasiHapus() {
 
 <p>Menambahkan audio di HTML sangat mudah menggunakan tag <code class="language-plaintext highlighter-rouge">&lt;audio&gt;</code>. Dengan memberikan kontrol, format yang tepat, dan penanganan fallback yang baik, kamu bisa menciptakan pengalaman audio yang nyaman bagi pengunjung situs kamu.</p>
 
-<hr />]]></content><author><name></name></author><summary type="html"><![CDATA[Penjelasan tentang Menambahkan Audio di HTML]]></summary></entry><entry><title type="html">Config.yml</title><link href="http://localhost:4000/2025/04/17/config-yml.html" rel="alternate" type="text/html" title="Config.yml" /><published>2025-04-17T00:00:00+07:00</published><updated>2025-04-17T00:00:00+07:00</updated><id>http://localhost:4000/2025/04/17/config-yml</id><content type="html" xml:base="http://localhost:4000/2025/04/17/config-yml.html"><![CDATA[<p>Penjelasan tentang Config.yml</p>
-
-<h2 id="apa-itu-_configyml-di-jekyll">Apa itu <code class="language-plaintext highlighter-rouge">_config.yml</code> di Jekyll?</h2>
-
-<p><code class="language-plaintext highlighter-rouge">_config.yml</code> adalah file konfigurasi utama dalam proyek Jekyll, yaitu platform pembuat situs statis berbasis Ruby. File ini digunakan untuk mengatur hampir semua aspek situs statis kamu, seperti:</p>
-
-<ul>
-  <li>Nama blog atau situs</li>
-  <li>Deskripsi</li>
-  <li>Tema yang digunakan</li>
-  <li>Plugin</li>
-  <li>Struktur URL</li>
-  <li>Metadata penulis, dll.</li>
-</ul>
-
-<hr />
-
-<p>Baik, Anggi Syaban Nabila! Berikut ini versi revisi dari penjelasan lengkap tentang <code class="language-plaintext highlighter-rouge">_config.yml</code> Jekyll yang menggunakan namamu sebagai contoh di dalam kontennya:</p>
-
-<hr />
-
-<h2 id="apa-itu-_configyml">Apa Itu <code class="language-plaintext highlighter-rouge">_config.yml</code>?</h2>
-
-<p>File <code class="language-plaintext highlighter-rouge">_config.yml</code> adalah <strong>jantung pengaturan</strong> dalam proyek Jekyll. Semua konfigurasi utama situs kamu — seperti nama situs, deskripsi, URL, hingga plugin yang digunakan — diatur melalui file ini. Jekyll akan membaca file ini setiap kali kamu membangun (build) situs statis.</p>
-
-<p>Karena menggunakan format <strong>YAML</strong>, file ini sangat mudah dibaca dan ditulis. Formatnya sederhana, namun fleksibel untuk berbagai kebutuhan.</p>
-
-<hr />
-
-<h2 id="lokasi-file">Lokasi File</h2>
-
-<p>File <code class="language-plaintext highlighter-rouge">_config.yml</code> diletakkan di <strong>root direktori proyek Jekyll</strong>, bersama file seperti <code class="language-plaintext highlighter-rouge">index.md</code> dan folder <code class="language-plaintext highlighter-rouge">_posts/</code>.</p>
-
-<hr />
-
-<h2 id="struktur-dasar-_configyml">Struktur Dasar <code class="language-plaintext highlighter-rouge">_config.yml</code></h2>
-
-<p>Contoh pengaturan awal untuk blog pribadi milik Anggi:</p>
-
-<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">title</span><span class="pi">:</span> <span class="s">Anggi Syaban Nabila's Blog</span>
-<span class="na">description</span><span class="pi">:</span> <span class="s">Catatan pribadi dan perjalanan belajar</span>
-<span class="na">url</span><span class="pi">:</span> <span class="s2">"</span><span class="s">https://angginabilabatubara.github.io/"</span>
-<span class="na">baseurl</span><span class="pi">:</span> <span class="s2">"</span><span class="s">"</span> <span class="c1"># kosong jika situs tidak di dalam sub-folder</span>
-<span class="na">theme</span><span class="pi">:</span> <span class="s">minima</span>
-</code></pre></div></div>
-
-<h3 id="penjelasan">Penjelasan:</h3>
-
-<ul>
-  <li><strong><code class="language-plaintext highlighter-rouge">title</code></strong>: Nama situs yang akan tampil di browser atau halaman utama.</li>
-  <li><strong><code class="language-plaintext highlighter-rouge">description</code></strong>: Deskripsi singkat untuk SEO dan identitas blog.</li>
-  <li><strong><code class="language-plaintext highlighter-rouge">url</code></strong>: Alamat utama blog kamu di GitHub Pages.</li>
-  <li><strong><code class="language-plaintext highlighter-rouge">baseurl</code></strong>: Diisi jika situs kamu berada dalam subfolder (kosong jika tidak).</li>
-  <li><strong><code class="language-plaintext highlighter-rouge">theme</code></strong>: Tema yang digunakan, seperti <code class="language-plaintext highlighter-rouge">minima</code>, <code class="language-plaintext highlighter-rouge">jekyll-theme-cayman</code>, dsb.</li>
-</ul>
-
-<hr />
-
-<h2 id="menambahkan-plugin">Menambahkan Plugin</h2>
-
-<p>Untuk memperluas fitur situs, kamu bisa menambahkan plugin:</p>
-
-<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">plugins</span><span class="pi">:</span>
-  <span class="pi">-</span> <span class="s">jekyll-feed</span>
-  <span class="pi">-</span> <span class="s">jekyll-seo-tag</span>
-</code></pre></div></div>
-
-<h3 id="contoh-kegunaannya">Contoh kegunaannya:</h3>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">jekyll-feed</code>: Menyediakan RSS feed otomatis.</li>
-  <li><code class="language-plaintext highlighter-rouge">jekyll-seo-tag</code>: Mengelola metadata SEO otomatis.</li>
-</ul>
-
-<hr />
-
-<h2 id="konfigurasi-tambahan">Konfigurasi Tambahan</h2>
-
-<p>Tambahan konfigurasi yang sering digunakan:</p>
-
-<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">author</span><span class="pi">:</span>
-  <span class="na">name</span><span class="pi">:</span> <span class="s">Anggi Syaban Nabila</span>
-  <span class="na">email</span><span class="pi">:</span> <span class="s">anggisyabannabilaagmail.com</span>
-
-<span class="na">permalink</span><span class="pi">:</span> <span class="s">/:title/</span>
-<span class="na">paginate</span><span class="pi">:</span> <span class="m">5</span>
-<span class="na">paginate_path</span><span class="pi">:</span> <span class="s2">"</span><span class="s">/page:num"</span>
-<span class="na">markdown</span><span class="pi">:</span> <span class="s">kramdown</span>
-<span class="na">highlighter</span><span class="pi">:</span> <span class="s">rouge</span>
-</code></pre></div></div>
-
-<h3 id="penjelasan-1">Penjelasan:</h3>
-
-<ul>
-  <li><strong><code class="language-plaintext highlighter-rouge">author</code></strong>: Identitas penulis yang bisa ditampilkan di halaman blog.</li>
-  <li><strong><code class="language-plaintext highlighter-rouge">permalink</code></strong>: Struktur URL untuk postingan (misal: <code class="language-plaintext highlighter-rouge">/judul-posting/</code>).</li>
-  <li><strong><code class="language-plaintext highlighter-rouge">paginate</code></strong>: Jumlah postingan per halaman jika menggunakan pagination.</li>
-  <li><strong><code class="language-plaintext highlighter-rouge">markdown</code></strong>: Mesin konversi Markdown, <code class="language-plaintext highlighter-rouge">kramdown</code> adalah default Jekyll.</li>
-  <li><strong><code class="language-plaintext highlighter-rouge">highlighter</code></strong>: Untuk menyoroti kode program (<code class="language-plaintext highlighter-rouge">rouge</code> adalah defaultnya).</li>
-</ul>
-
-<hr />
-
-<h2 id="variabel-kustom">Variabel Kustom</h2>
-
-<p>Kamu juga bisa membuat variabel sendiri:</p>
-
-<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">social</span><span class="pi">:</span>
-  <span class="na">github</span><span class="pi">:</span> <span class="s">https://github.com/anggisyaban</span>
-  <span class="na">instagram</span><span class="pi">:</span> <span class="s">https://instagram.com/anggisyaban</span>
-</code></pre></div></div>
-
-<p>Lalu dipanggil di layout:</p>
-
-<div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;a href=""&gt;GitHub&lt;/a&gt;
-</code></pre></div></div>
-
-<hr />
-
-<h2 id="mode-build-multi-konfigurasi">Mode Build Multi-Konfigurasi</h2>
-
-<p>Untuk keperluan produksi dan pengembangan:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll build <span class="nt">--config</span> _config.yml,_config-dev.yml
-</code></pre></div></div>
-
-<p>Ini memungkinkan kamu memisahkan konfigurasi untuk testing dan produksi.</p>
-
-<hr />
-
-<h2 id="tips-dan-catatan">Tips dan Catatan</h2>
-
-<ul>
-  <li>YAML sensitif terhadap spasi: gunakan 2 spasi, jangan tab.</li>
-  <li>Gunakan <code class="language-plaintext highlighter-rouge">#</code> untuk komentar.</li>
-  <li>Hindari kutip ganda atau kutip tunggal kecuali diperlukan.</li>
-</ul>
-
-<hr />
-
-<h2 id="kesimpulan">Kesimpulan</h2>
-
-<p>File <code class="language-plaintext highlighter-rouge">_config.yml</code> memudahkan kamu mengelola blog statis Jekyll secara fleksibel dan efisien. Dengan satu file ini, kamu bisa mengatur tampilan, metadata, struktur URL, plugin, hingga info pribadi seperti nama dan akun media sosial.</p>
-
-<p>Jadi, bagi kamu yang sedang membangun blog dengan Jekyll seperti Anggi Syaban Nabila, memahami <code class="language-plaintext highlighter-rouge">_config.yml</code> adalah langkah awal untuk membentuk situs pribadi yang rapi, terstruktur, dan profesional.</p>]]></content><author><name></name></author><summary type="html"><![CDATA[Penjelasan tentang Config.yml]]></summary></entry><entry><title type="html">HTML Link dan Lists</title><link href="http://localhost:4000/2025/03/20/html-link-dan-lists.html" rel="alternate" type="text/html" title="HTML Link dan Lists" /><published>2025-03-20T00:00:00+07:00</published><updated>2025-03-20T00:00:00+07:00</updated><id>http://localhost:4000/2025/03/20/html-link-dan-lists</id><content type="html" xml:base="http://localhost:4000/2025/03/20/html-link-dan-lists.html"><![CDATA[<p>Penjelasan tentang Link dan Lists pada HTML.</p>
-
-<h1 id="penjelasan-lengkap-tentang-link-dan-lists-pada-html"><strong>Penjelasan Lengkap tentang Link dan Lists pada HTML</strong></h1>
-
-<p>Dalam <strong>HTML</strong> (<em>HyperText Markup Language</em>), <strong>link</strong> dan <strong>lists</strong> adalah elemen dasar yang sangat penting dalam membuat struktur dan navigasi halaman web. Berikut adalah penjelasan lengkap tentang kedua elemen ini:</p>
-
-<hr />
-
-<h2 id="1-link-tautan-pada-html"><strong>1. Link (Tautan) pada HTML</strong></h2>
-<p>Link atau tautan dalam HTML digunakan untuk menghubungkan satu halaman ke halaman lainnya atau ke sumber eksternal seperti file, gambar, atau dokumen lainnya. Link juga bisa digunakan untuk menavigasi ke bagian tertentu dalam satu halaman web.</p>
-
-<h3 id="a-sintaks-dasar-link"><strong>A. Sintaks Dasar Link</strong></h3>
-<p>Tag yang digunakan untuk membuat link adalah <code class="language-plaintext highlighter-rouge">&lt;a&gt;</code> (<strong>anchor</strong>).</p>
-
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Teks atau elemen yang bisa diklik<span class="nt">&lt;/a&gt;</span>
-</code></pre></div></div>
-
-<h3 id="b-atribut-pada-tag-a"><strong>B. Atribut pada Tag <code class="language-plaintext highlighter-rouge">&lt;a&gt;</code></strong></h3>
-<p>Berikut adalah atribut-atribut yang biasa digunakan pada elemen <code class="language-plaintext highlighter-rouge">&lt;a&gt;</code>:</p>
-
-<ul>
-  <li><strong><code class="language-plaintext highlighter-rouge">href</code></strong> – Menentukan URL tujuan link.<br />
-  <strong>Contoh:</strong>
-    <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://www.example.com"</span><span class="nt">&gt;</span>
-  Kunjungi Example<span class="nt">&lt;/a&gt;</span>
-</code></pre></div>    </div>
-  </li>
-  <li><strong><code class="language-plaintext highlighter-rouge">target</code></strong> – Menentukan bagaimana link dibuka.<br />
-  Nilai yang tersedia:
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">_self</code> – Membuka link di tab/jendela saat ini (default).</li>
-      <li><code class="language-plaintext highlighter-rouge">_blank</code> – Membuka link di tab/jendela baru.</li>
-      <li><code class="language-plaintext highlighter-rouge">_parent</code> – Membuka link di jendela induk (jika ada).</li>
-      <li><code class="language-plaintext highlighter-rouge">_top</code> – Membuka link di jendela penuh (keluar dari frame).</li>
-    </ul>
-
-    <p><strong>Contoh:</strong></p>
-    <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://www.example.com"</span> 
-  <span class="na">target=</span><span class="s">"_blank"</span><span class="nt">&gt;</span>
-  Buka di Tab Baru<span class="nt">&lt;/a&gt;</span>
-</code></pre></div>    </div>
-  </li>
-  <li><strong><code class="language-plaintext highlighter-rouge">title</code></strong> – Menampilkan keterangan saat kursor diarahkan ke link.<br />
-  <strong>Contoh:</strong>
-    <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">title=</span><span class="s">"Keterangan"</span><span class="nt">&gt;</span>
-  Link dengan Keterangan<span class="nt">&lt;/a&gt;</span>
-</code></pre></div>    </div>
-  </li>
-  <li><strong><code class="language-plaintext highlighter-rouge">rel</code></strong> – Menentukan hubungan antara dokumen dengan link tujuan.<br />
-  Nilai yang umum digunakan:
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">nofollow</code> – Memberitahu mesin pencari untuk tidak mengikuti link ini.</li>
-      <li><code class="language-plaintext highlighter-rouge">noopener</code> – Mencegah halaman baru mengakses <code class="language-plaintext highlighter-rouge">window.opener</code>.</li>
-      <li><code class="language-plaintext highlighter-rouge">noreferrer</code> – Mencegah pengiriman informasi referensi ke halaman tujuan.</li>
-    </ul>
-
-    <p><strong>Contoh:</strong></p>
-    <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://www.example.com"</span>
-  <span class="na">target=</span><span class="s">"_blank"</span> <span class="na">rel=</span><span class="s">"nofollow 
-  noopener noreferrer"</span><span class="nt">&gt;</span>
-  Kunjungi Example dengan Aman
-  <span class="nt">&lt;/a&gt;</span>
-</code></pre></div>    </div>
-  </li>
-  <li><strong><code class="language-plaintext highlighter-rouge">download</code></strong> – Menginstruksikan browser untuk mengunduh file daripada membukanya.<br />
-  <strong>Contoh:</strong>
-    <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"file.pdf"</span> <span class="na">download</span><span class="nt">&gt;</span>
-  Unduh File PDF<span class="nt">&lt;/a&gt;</span>
-</code></pre></div>    </div>
-  </li>
-</ul>
-
-<h3 id="c-nilai-untuk-atribut-target"><strong>C. Nilai untuk Atribut <code class="language-plaintext highlighter-rouge">target</code></strong></h3>
-<p>Berikut adalah nilai yang dapat digunakan pada atribut <code class="language-plaintext highlighter-rouge">target</code>:</p>
-
-<ul>
-  <li><strong><code class="language-plaintext highlighter-rouge">_self</code></strong> – <em>(Default)</em> Membuka link di tab/jendela saat ini.</li>
-  <li><strong><code class="language-plaintext highlighter-rouge">_blank</code></strong> – Membuka link di tab/jendela baru.</li>
-  <li><strong><code class="language-plaintext highlighter-rouge">_parent</code></strong> – Membuka link di jendela induk (jika ada).</li>
-  <li><strong><code class="language-plaintext highlighter-rouge">_top</code></strong> – Membuka link di jendela penuh (keluar dari frame).</li>
-</ul>
-
-<p><strong>Contoh:</strong></p>
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://www.example.com"</span> 
-<span class="na">target=</span><span class="s">"_blank"</span><span class="nt">&gt;</span>
-Buka di Tab Baru<span class="nt">&lt;/a&gt;</span>
-</code></pre></div></div>
-<h3 id="d-nilai-untuk-atribut-rel"><strong>D. Nilai untuk Atribut <code class="language-plaintext highlighter-rouge">rel</code></strong></h3>
-<p>Berikut adalah nilai yang umum digunakan pada atribut <code class="language-plaintext highlighter-rouge">rel</code>:</p>
-
-<ul>
-  <li><strong><code class="language-plaintext highlighter-rouge">nofollow</code></strong> – Memberitahu mesin pencari untuk tidak mengikuti link ini.</li>
-  <li><strong><code class="language-plaintext highlighter-rouge">noopener</code></strong> – Mencegah halaman baru mengakses <code class="language-plaintext highlighter-rouge">window.opener</code>.</li>
-  <li><strong><code class="language-plaintext highlighter-rouge">noreferrer</code></strong> – Mencegah pengiriman informasi referensi ke halaman tujuan.</li>
-  <li><strong><code class="language-plaintext highlighter-rouge">alternate</code></strong> – Menunjukkan versi alternatif dari halaman saat ini.</li>
-</ul>
-
-<p><strong>Contoh:</strong></p>
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://www.example.com"</span> 
-<span class="na">target=</span><span class="s">"_blank"</span> 
-<span class="na">rel=</span><span class="s">"noopener noreferrer"</span><span class="nt">&gt;</span>
-Kunjungi Example dengan Aman
-<span class="nt">&lt;/a&gt;</span>
-</code></pre></div></div>
-
-<h2 id="2-lists-daftar-pada-html"><strong>2. Lists (Daftar) pada HTML</strong></h2>
-<p>Lists digunakan untuk menyusun konten secara terstruktur dalam format daftar. HTML menyediakan tiga jenis utama daftar:</p>
-
-<hr />
-
-<h3 id="a-ordered-list-ol"><strong>A. Ordered List (<code class="language-plaintext highlighter-rouge">&lt;ol&gt;</code>)</strong></h3>
-<p><code class="language-plaintext highlighter-rouge">Ordered List</code> digunakan untuk membuat daftar terurut (menggunakan angka, huruf, atau simbol).</p>
-
-<h4 id="sintaks-dasar"><strong>Sintaks Dasar:</strong></h4>
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;ol&gt;</span>
-    <span class="nt">&lt;li&gt;</span>Item 1<span class="nt">&lt;/li&gt;</span>
-    <span class="nt">&lt;li&gt;</span>Item 2<span class="nt">&lt;/li&gt;</span>
-    <span class="nt">&lt;li&gt;</span>Item 3<span class="nt">&lt;/li&gt;</span>
-<span class="nt">&lt;/ol&gt;</span>
-</code></pre></div></div>
-<h3 id="-atribut-pada-ol">🔹 <strong>Atribut pada <code class="language-plaintext highlighter-rouge">&lt;ol&gt;</code></strong></h3>
-<p>Berikut adalah atribut yang umum digunakan pada elemen <code class="language-plaintext highlighter-rouge">&lt;ol&gt;</code>:</p>
-
-<ul>
-  <li><strong><code class="language-plaintext highlighter-rouge">type</code></strong> – Menentukan tipe penomoran dalam daftar.<br />
-  Nilai yang tersedia:
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">"1"</code> → Angka (default)</li>
-      <li><code class="language-plaintext highlighter-rouge">"A"</code> → Huruf kapital</li>
-      <li><code class="language-plaintext highlighter-rouge">"a"</code> → Huruf kecil</li>
-      <li><code class="language-plaintext highlighter-rouge">"I"</code> → Angka romawi kapital</li>
-      <li><code class="language-plaintext highlighter-rouge">"i"</code> → Angka romawi kecil</li>
-    </ul>
-  </li>
-  <li>
-    <p><strong><code class="language-plaintext highlighter-rouge">start</code></strong> – Menentukan nomor awal dari daftar (dalam format angka).</p>
-  </li>
-  <li><strong><code class="language-plaintext highlighter-rouge">reversed</code></strong> – Menampilkan daftar dalam urutan terbalik (tidak memerlukan nilai).</li>
-</ul>
-
-<hr />
-
-<h4 id="contoh-dengan-atribut"><strong>Contoh dengan Atribut:</strong></h4>
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;ol</span> <span class="na">type=</span><span class="s">"A"</span> <span class="na">start=</span><span class="s">"5"</span> <span class="na">reversed</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;li&gt;</span>Item 5<span class="nt">&lt;/li&gt;</span>
-    <span class="nt">&lt;li&gt;</span>Item 4<span class="nt">&lt;/li&gt;</span>
-    <span class="nt">&lt;li&gt;</span>Item 3<span class="nt">&lt;/li&gt;</span>
-<span class="nt">&lt;/ol&gt;</span>
-</code></pre></div></div>
-<h3 id="b-unordered-list-ul"><strong>B. Unordered List (<code class="language-plaintext highlighter-rouge">&lt;ul&gt;</code>)</strong></h3>
-<p><code class="language-plaintext highlighter-rouge">Unordered List</code> digunakan untuk membuat daftar tidak terurut (menggunakan simbol seperti lingkaran, kotak, atau titik).</p>
-
-<hr />
-
-<h4 id="sintaks-dasar-1"><strong>Sintaks Dasar:</strong></h4>
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;ul&gt;</span>
-    <span class="nt">&lt;li&gt;</span>Item 1<span class="nt">&lt;/li&gt;</span>
-    <span class="nt">&lt;li&gt;</span>Item 2<span class="nt">&lt;/li&gt;</span>
-    <span class="nt">&lt;li&gt;</span>Item 3<span class="nt">&lt;/li&gt;</span>
-<span class="nt">&lt;/ul&gt;</span>
-</code></pre></div></div>
-<h3 id="-atribut-pada-ul">🔹 <strong>Atribut pada <code class="language-plaintext highlighter-rouge">&lt;ul&gt;</code></strong></h3>
-<p>Berikut adalah atribut yang umum digunakan pada elemen <code class="language-plaintext highlighter-rouge">&lt;ul&gt;</code>:</p>
-
-<ul>
-  <li><strong><code class="language-plaintext highlighter-rouge">type</code></strong> – Menentukan simbol untuk setiap item dalam daftar.<br />
-  Nilai yang tersedia:
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">"disc"</code> → Lingkaran hitam (default)</li>
-      <li><code class="language-plaintext highlighter-rouge">"circle"</code> → Lingkaran kosong</li>
-      <li><code class="language-plaintext highlighter-rouge">"square"</code> → Kotak hitam</li>
-    </ul>
-  </li>
-</ul>
-
-<hr />
-
-<h4 id="contoh-dengan-atribut-1"><strong>Contoh dengan Atribut:</strong></h4>
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;ul</span> <span class="na">type=</span><span class="s">"circle"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;li&gt;</span>Apel<span class="nt">&lt;/li&gt;</span>
-    <span class="nt">&lt;li&gt;</span>Pisang<span class="nt">&lt;/li&gt;</span>
-<span class="nt">&lt;/ul&gt;</span>
-</code></pre></div></div>
-
-<h2 id="3-gabungan-link-dan-list"><strong>3. Gabungan Link dan List</strong></h2>
-<p>Berikut adalah contoh penggunaan <strong>link</strong> di dalam <strong>list</strong> untuk menautkan ke sumber daya terkait:</p>
-
-<hr />
-
-<h4 id="contoh"><strong>Contoh:</strong></h4>
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;h2&gt;</span>Daftar Teknologi Web<span class="nt">&lt;/h2&gt;</span>
-<span class="nt">&lt;ol&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"https://developer.mozilla
-    .org/en-US/docs/Web/HTML"</span><span class="nt">&gt;</span>HTML<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"https://developer.mozilla
-    .org/en-US/docs/Web/CSS"</span><span class="nt">&gt;</span>CSS<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"https://developer.mozilla
-    .org/en-US/docs/Web/JavaScript"</span><span class="nt">&gt;</span>
-    JavaScript<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-<span class="nt">&lt;/ol&gt;</span>
-</code></pre></div></div>
-
-<h2 id="kesimpulan"><strong>Kesimpulan</strong></h2>
-<p><strong>Link (<code class="language-plaintext highlighter-rouge">&lt;a&gt;</code>)</strong> → Digunakan untuk navigasi antar halaman atau sumber daya.<br />
- <strong>Ordered List (<code class="language-plaintext highlighter-rouge">&lt;ol&gt;</code>)</strong> → Daftar terurut (menggunakan angka, huruf, atau simbol).<br />
- <strong>Unordered List (<code class="language-plaintext highlighter-rouge">&lt;ul&gt;</code>)</strong> → Daftar tidak terurut (menggunakan bullet).</p>]]></content><author><name></name></author><summary type="html"><![CDATA[Penjelasan tentang Link dan Lists pada HTML.]]></summary></entry><entry><title type="html">Layout dan Navigation</title><link href="http://localhost:4000/2025/03/13/layout-dan-navigation.html" rel="alternate" type="text/html" title="Layout dan Navigation" /><published>2025-03-13T00:00:00+07:00</published><updated>2025-03-13T00:00:00+07:00</updated><id>http://localhost:4000/2025/03/13/layout-dan-navigation</id><content type="html" xml:base="http://localhost:4000/2025/03/13/layout-dan-navigation.html"><![CDATA[<p>Penjelasan tentang Layout dan Navigation</p>
-
-<h1 id="layout-dan-navigasi"><strong>Layout dan Navigasi</strong></h1>
-
-<h2 id="1-layout"><strong>1. Layout</strong></h2>
-<h3 id="pengertian-layout"><strong>Pengertian Layout</strong></h3>
-<p>Layout adalah pengaturan elemen-elemen visual pada suatu antarmuka atau halaman. Tujuan utama dari layout adalah untuk menciptakan struktur yang jelas dan mempermudah pengguna dalam memahami serta berinteraksi dengan konten.</p>
-
-<hr />
-
-<h3 id="fungsi-layout"><strong>Fungsi Layout</strong></h3>
-<ul>
-  <li><strong>Meningkatkan keterbacaan dan keteraturan</strong> – Membantu pengguna dalam memahami hierarki informasi.</li>
-  <li><strong>Mengarahkan perhatian pengguna</strong> – Menyoroti elemen-elemen penting seperti tombol CTA (Call to Action) atau pesan penting.</li>
-  <li><strong>Meningkatkan efisiensi</strong> – Menyusun elemen sehingga mempermudah pengguna dalam menemukan informasi atau menyelesaikan tugas.</li>
-  <li><strong>Estetika dan daya tarik</strong> – Menjadikan tampilan antarmuka menarik secara visual dan konsisten.</li>
-</ul>
-
-<hr />
-
-<h3 id="prinsip-prinsip-layout"><strong>Prinsip-Prinsip Layout</strong></h3>
-<ol>
-  <li><strong>Alignment (Penyelarasan)</strong>
-    <ul>
-      <li>Menata elemen secara konsisten (kiri, kanan, tengah) untuk menciptakan keteraturan.</li>
-      <li>Menyelaraskan elemen antar bagian agar terlihat rapi dan mudah dipahami.</li>
-    </ul>
-  </li>
-  <li><strong>Proximity (Kedekatan)</strong>
-    <ul>
-      <li>Elemen yang berhubungan dikelompokkan bersama untuk menunjukkan hubungan antar elemen.</li>
-      <li>Elemen yang memiliki fungsi serupa harus ditempatkan berdekatan.</li>
-    </ul>
-  </li>
-  <li><strong>Repetition (Pengulangan)</strong>
-    <ul>
-      <li>Gunakan gaya, warna, font, dan elemen desain yang sama secara konsisten untuk menciptakan kesatuan.</li>
-      <li>Misalnya, gunakan warna dan bentuk tombol yang sama di seluruh halaman.</li>
-    </ul>
-  </li>
-  <li><strong>Contrast (Kontras)</strong>
-    <ul>
-      <li>Gunakan perbedaan warna, ukuran, atau gaya untuk membedakan elemen penting dan menarik perhatian pengguna.</li>
-      <li>Contoh: Tombol CTA berwarna mencolok dibanding elemen lainnya.</li>
-    </ul>
-  </li>
-  <li><strong>White Space (Ruang Kosong)</strong>
-    <ul>
-      <li>Berikan ruang kosong di sekitar elemen untuk memberikan “napas” dan mengurangi kebingungan.</li>
-      <li>Ruang kosong meningkatkan fokus pada elemen penting.</li>
-    </ul>
-  </li>
-</ol>
-
-<hr />
-
-<h3 id="jenis-layout-umum"><strong>Jenis Layout Umum</strong></h3>
-<ol>
-  <li><strong>Single-Column Layout</strong>
-    <ul>
-      <li>Menggunakan satu kolom untuk menyusun konten secara vertikal.</li>
-      <li>Cocok untuk perangkat mobile atau desain minimalis.</li>
-    </ul>
-  </li>
-  <li><strong>Multi-Column Layout</strong>
-    <ul>
-      <li>Membagi halaman menjadi dua atau lebih kolom untuk menyusun konten secara horizontal dan vertikal.</li>
-      <li>Cocok untuk desktop dan tampilan dengan banyak informasi.</li>
-    </ul>
-  </li>
-  <li><strong>Grid-Based Layout</strong>
-    <ul>
-      <li>Menggunakan sistem grid untuk menyusun elemen dengan keteraturan dan konsistensi.</li>
-      <li>Banyak digunakan dalam desain web modern (CSS Grid, Bootstrap).</li>
-    </ul>
-  </li>
-  <li><strong>Card-Based Layout</strong>
-    <ul>
-      <li>Menyusun konten dalam bentuk kartu yang dapat dipindahkan atau diubah ukurannya.</li>
-      <li>Digunakan dalam platform seperti Pinterest dan Trello.</li>
-    </ul>
-  </li>
-  <li><strong>Split-Screen Layout</strong>
-    <ul>
-      <li>Membagi layar menjadi dua bagian yang sejajar, cocok untuk membandingkan informasi atau menampilkan dua jenis konten berbeda.</li>
-    </ul>
-  </li>
-</ol>
-
-<hr />
-
-<h2 id="2-navigasi"><strong>2. Navigasi</strong></h2>
-<h3 id="pengertian-navigasi"><strong>Pengertian Navigasi</strong></h3>
-<p>Navigasi adalah cara pengguna berpindah antar halaman atau bagian dalam sebuah aplikasi atau situs web. Navigasi yang efektif memungkinkan pengguna menemukan informasi dengan cepat dan mudah tanpa merasa bingung.</p>
-
-<hr />
-
-<h3 id="fungsi-navigasi"><strong>Fungsi Navigasi</strong></h3>
-<ul>
-  <li><strong>Mempermudah akses informasi</strong> – Membantu pengguna menemukan informasi yang mereka butuhkan.</li>
-  <li><strong>Meningkatkan pengalaman pengguna (UX)</strong> – Navigasi yang intuitif menciptakan kenyamanan dalam penggunaan.</li>
-  <li><strong>Mengurangi tingkat bounce rate</strong> – Jika pengguna mudah menemukan informasi, mereka akan bertahan lebih lama di situs atau aplikasi.</li>
-  <li><strong>Mengatur hierarki informasi</strong> – Menunjukkan struktur dan hubungan antar halaman atau bagian dalam aplikasi.</li>
-</ul>
-
-<hr />
-
-<h3 id="prinsip-prinsip-navigasi"><strong>Prinsip-Prinsip Navigasi</strong></h3>
-<ol>
-  <li><strong>Konsistensi</strong>
-    <ul>
-      <li>Posisi dan gaya navigasi harus konsisten di seluruh halaman.</li>
-      <li>Jika navigasi berada di bagian atas halaman, pastikan posisinya tidak berubah di halaman lain.</li>
-    </ul>
-  </li>
-  <li><strong>Hirarki yang Jelas</strong>
-    <ul>
-      <li>Gunakan struktur menu yang logis dan terorganisir (misalnya kategori utama → sub-kategori).</li>
-      <li>Menu utama harus menampilkan elemen penting dan langsung terlihat.</li>
-    </ul>
-  </li>
-  <li><strong>Feedback</strong>
-    <ul>
-      <li>Berikan umpan balik visual saat elemen navigasi diklik atau dihover (misalnya perubahan warna atau animasi).</li>
-      <li>Tunjukkan posisi pengguna saat ini dalam struktur navigasi (misalnya dengan breadcrumb).</li>
-    </ul>
-  </li>
-  <li><strong>Deskripsi yang Jelas</strong>
-    <ul>
-      <li>Gunakan nama menu atau tombol yang deskriptif dan mudah dimengerti.</li>
-      <li>Hindari istilah teknis yang membingungkan pengguna.</li>
-    </ul>
-  </li>
-  <li><strong>Menghindari Terlalu Banyak Pilihan</strong>
-    <ul>
-      <li>Jangan memberikan terlalu banyak opsi di menu utama untuk menghindari kebingungan (prinsip <strong>Hick’s Law</strong>).</li>
-      <li>Idealnya, gunakan 5–7 item menu utama.</li>
-    </ul>
-  </li>
-</ol>
-
-<hr />
-
-<h3 id="jenis-navigasi"><strong>Jenis Navigasi</strong></h3>
-<ol>
-  <li><strong>Navigasi Horizontal</strong>
-    <ul>
-      <li>Menu utama ditempatkan secara horizontal di bagian atas halaman.</li>
-      <li>Cocok untuk desktop dan website dengan banyak kategori.</li>
-    </ul>
-  </li>
-  <li><strong>Navigasi Vertikal</strong>
-    <ul>
-      <li>Menu utama ditampilkan di sisi kiri atau kanan halaman dalam bentuk kolom.</li>
-      <li>Cocok untuk desain dashboard atau aplikasi kompleks.</li>
-    </ul>
-  </li>
-  <li><strong>Hamburger Menu</strong>
-    <ul>
-      <li>Ikon berbentuk tiga garis horizontal yang membuka menu tersembunyi saat diklik.</li>
-      <li>Digunakan pada aplikasi mobile dan website responsif.</li>
-    </ul>
-  </li>
-  <li><strong>Breadcrumb Navigation</strong>
-    <ul>
-      <li>Menunjukkan posisi pengguna dalam hierarki halaman.</li>
-      <li>Contoh: <strong>Home &gt; Produk &gt; Pakaian &gt; Kemeja</strong></li>
-    </ul>
-  </li>
-  <li><strong>Footer Navigation</strong>
-    <ul>
-      <li>Navigasi tambahan yang ditempatkan di bagian bawah halaman (biasanya berisi tautan ke kebijakan privasi, kontak, dan FAQ).</li>
-    </ul>
-  </li>
-  <li><strong>Sidebar Navigation</strong>
-    <ul>
-      <li>Ditempatkan di sisi kiri atau kanan, biasanya berisi menu kategori atau filter.</li>
-      <li>Digunakan dalam e-commerce dan aplikasi analitik.</li>
-    </ul>
-  </li>
-  <li><strong>Tab Navigation</strong>
-    <ul>
-      <li>Menyusun beberapa opsi dalam bentuk tab untuk berpindah antar konten.</li>
-      <li>Cocok untuk aplikasi berbasis data atau pengaturan.</li>
-    </ul>
-  </li>
-</ol>
-
-<hr />
-
-<h3 id="contoh-praktis-navigasi-yang-efektif"><strong>Contoh Praktis Navigasi yang Efektif</strong></h3>
-<p>✅ Gunakan <strong>highlight</strong> pada menu yang sedang aktif untuk menunjukkan posisi pengguna.<br />
-✅ Berikan <strong>ikon pendukung</strong> untuk memudahkan pemahaman.<br />
-✅ Gunakan <strong>hover effect</strong> dan <strong>animation</strong> ringan untuk memberikan feedback.<br />
-✅ Pastikan <strong>menu dropdown</strong> dapat diakses dengan cepat tanpa keterlambatan.<br />
-✅ Pastikan navigasi <strong>responsif</strong> pada semua perangkat (desktop, tablet, dan mobile).</p>
-
-<hr />
-
-<h2 id="️-hubungan-antara-layout-dan-navigasi"><strong>➡️ Hubungan Antara Layout dan Navigasi</strong></h2>
-<ul>
-  <li><strong>Layout</strong> menentukan bagaimana elemen navigasi akan ditempatkan dalam antarmuka.</li>
-  <li><strong>Navigasi</strong> memungkinkan pengguna untuk berpindah antar elemen yang telah diatur dalam layout.</li>
-  <li>Kombinasi layout yang rapi dan navigasi yang intuitif menciptakan <strong>pengalaman pengguna (UX) yang lancar</strong> dan meningkatkan <strong>konversi</strong>.</li>
-</ul>
-
-<hr />
-
-<h2 id="-kesimpulan">🎯 <strong>Kesimpulan</strong></h2>
-<ul>
-  <li><strong>Layout</strong> berfokus pada pengaturan elemen visual untuk menciptakan struktur yang rapi dan menarik.</li>
-  <li><strong>Navigasi</strong> bertugas memandu pengguna untuk berpindah antar elemen dan menemukan informasi dengan mudah.</li>
-  <li>Keduanya harus dirancang secara <strong>konsisten</strong> dan <strong>terintegrasi</strong> untuk menciptakan pengalaman pengguna yang optimal.</li>
-  <li></li>
-</ul>]]></content><author><name></name></author><summary type="html"><![CDATA[Penjelasan tentang Layout dan Navigation]]></summary></entry></feed>
+<hr />]]></content><author><name></name></author><summary type="html"><![CDATA[Penjelasan tentang Menambahkan Audio di HTML]]></summary></entry></feed>
